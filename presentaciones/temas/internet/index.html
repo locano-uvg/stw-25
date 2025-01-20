@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Presentación</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/moon.min.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>Fundamentos de redes</h2>
+        <h4>Internet antes de la web</h4>
+        <p>Telnet, IPs, Puertos, Concurrencia y DNS</p>
+      </section>
+      <section>
+        <section>
+          <h2>Prerrequisitos de la Actividad</h2>
+        </section>
+        <section >
+          <p>Software para establecer conexiones TELNET y SSH.</p>
+          <ul>
+            <li><strong>Terminus:</strong> Windows y macOS. <a
+                href="https://eugeny.github.io/terminus/">https://eugeny.github.io/terminus/</a>.</li>
+            <li><strong>PuTTY:</strong> Windows. <a href="https://www.putty.org/">https://www.putty.org/</a>.</li>
+            <li><strong>Homebrew:</strong> macOS. Instalar Telnet:
+              <pre><code>brew install telnet</code></pre>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Protocolo Telnet</h2>
+        </section>
+        <section>
+          <p><strong>¿Qué es Telnet?</strong></p>
+          <ul>
+            <li>Protocolo utilizado para conexiones remotas en redes TCP/IP.</li>
+            <li>Permite acceder a dispositivos como servidores o routers mediante una sesión interactiva.</li>
+          </ul>
+        </section>
+        <section>
+          <p><strong>Comandos Básicos</strong></p>
+          <pre><code>telnet &lt;IP&gt; &lt;puerto&gt;
+  Ejemplo: telnet 192.168.1.1 23</code></pre>
+          <p><strong>Limitaciones</strong></p>
+          <ul>
+            <li>Vulnerabilidad a intercepciones.</li>
+            <li>Fue reemplazado por protocolos más seguros como SSH.</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Puertos y Direcciones IP</h2>
+        </section>
+        <section>
+          <p><strong>¿Qué son las direcciones IP?</strong></p>
+          <ul>
+            <li>Identifican dispositivos en una red.</li>
+            <li>Están compuestas por números separados por puntos (IPv4) o por dos puntos (IPv6).</li>
+          </ul>
+        </section>
+        <section>
+          <p><strong>IPv4</strong></p>
+          <ul>
+            <li>Formato: Cuatro octetos separados por puntos (e.g., 192.168.1.1).</li>
+            <li>Cada octeto tiene un valor entre 0 y 255 (8 bits: 2<sup>8</sup> = 256 valores posibles).</li>
+          </ul>
+        </section>
+        <section>
+          <p><strong>IPv6</strong></p>
+          <ul>
+            <li>Formato: Direcciones más largas, separadas por dos puntos (e.g.,
+              2001:0db8:85a3:0000:0000:8a2e:0370:7334).</li>
+            <li>Diseñadas para soportar un número mucho mayor de dispositivos conectados.</li>
+          </ul>
+        </section>
+        <section>
+          <p><strong>Puertos</strong></p>
+          <ul>
+            <li>Un puerto es un identificador numérico asociado a un servicio o aplicación en un dispositivo.</li>
+            <li>Rango de valores: 0 a 65535 (16 bits).</li>
+          </ul>
+        </section>
+        <section>
+          <p><strong>Categorías de Puertos</strong></p>
+          <ul>
+            <li><strong>0-1023:</strong> Puertos bien conocidos (e.g., 80 para HTTP, 23 para Telnet).</li>
+            <li><strong>1024-49151:</strong> Puertos registrados para aplicaciones.</li>
+            <li><strong>49152-65535:</strong> Puertos dinámicos o privados.</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Conexiones Concurrentes</h2>
+        </section>
+        <section>
+          <p><strong>¿Qué es una conexión concurrente?</strong></p>
+          <ul>
+            <li>Múltiples clientes conectados a un servidor simultáneamente.</li>
+            <li>Los mensajes enviados por un cliente son visibles para todos.</li>
+          </ul>
+        </section>
+        <section>
+          <p><strong>Manejo de Conexiones</strong></p>
+          <ul>
+            <li>Los servidores utilizan <strong>sockets</strong> para aceptar y gestionar varias conexiones.</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Protocolo HTTP y Servidores HTTP Simples</h2>
+        </section>
+        <section>
+          <p><strong>¿Cómo funciona un servidor HTTP?</strong></p>
+          <ul>
+            <li>Un servidor HTTP escucha solicitudes en un puerto (comúnmente el puerto 80 para HTTP o 443 para HTTPS).
+            </li>
+            <li>Cuando recibe una solicitud, analiza los datos proporcionados (método, ruta, headers).</li>
+            <li>Genera una respuesta basada en el recurso solicitado y la envía de vuelta al cliente.</li>
+          </ul>
+        </section>
+        <section>
+          <p><strong>Métodos HTTP</strong></p>
+          <ul>
+            <li><strong>GET:</strong> Solicita un recurso del servidor, como una página web o archivo.</li>
+            <li><strong>POST:</strong> Envía datos al servidor, generalmente para guardar información o procesar
+              formularios.</li>
+          </ul>
+        </section>
+        <section>
+          <p><strong>Servidor HTTP</strong></p>
+          <p>Comando para iniciar un servidor HTTP simple con Python:</p>
+          <pre><code>python3 -m http.server</code></pre>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Archivo de Hosts</h2>
+        </section>
+        <section>
+          <p><strong>¿Qué es el Archivo de Hosts?</strong></p>
+          <ul>
+            <li>Archivo local que asigna nombres a direcciones IP sin usar un servidor DNS.</li>
+            <li>Ubicación común: <code>/etc/hosts</code> en sistemas UNIX/Linux.</li>
+            <li>En sistemas Windows, se encuentra en <code>C:\Windows\System32\drivers\etc\hosts</code>.</li>
+          </ul>
+        </section>
+        <section>
+          <p><strong>Función del Archivo de Hosts</strong></p>
+          <ul>
+            <li>Actúa como intermediario antes de que una solicitud de dominio llegue a un servidor DNS.</li>
+            <li>Si un dominio está definido en este archivo, el sistema resuelve la dirección IP localmente.</li>
+            <li>Permite redirigir dominios específicos a direcciones IP diferentes, como para pruebas locales.</li>
+          </ul>
+        </section>
+        <section>
+          <p><strong>Ejemplo de Configuración</strong></p>
+          <pre><code>192.168.1.1 example.local
+  127.0.0.1 localhost</code></pre>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h2>Sistema de Nombres de Dominio (DNS)</h2>
+        </section>
+        <section>
+          <p><strong>¿Qué es DNS?</strong></p>
+          <ul>
+            <li>El DNS (Domain Name System) es un sistema que traduce nombres de dominio legibles por humanos (e.g.,
+              example.com) en direcciones IP que las computadoras utilizan para comunicarse (e.g., 192.168.1.1).</li>
+            <li>Es esencial para que los usuarios puedan acceder a recursos en Internet sin necesidad de recordar
+              direcciones IP.</li>
+          </ul>
+        </section>
+        <section>
+          <p><strong>¿Para qué sirve DNS?</strong></p>
+          <ul>
+            <li>Facilita la navegación al permitir el uso de nombres amigables en lugar de direcciones IP.</li>
+            <li>Es una parte crucial de la infraestructura de Internet, utilizada para servicios como correo
+              electrónico, navegación web, y aplicaciones en línea.</li>
+            <li>Permite gestionar dominios y subdominios.</li>
+          </ul>
+        </section>
+        <section>
+          <p><strong>¿Qué son las tablas de zonas?</strong></p>
+          <ul>
+            <li>Son archivos o bases de datos que contienen mapeos entre nombres de dominio y direcciones IP.</li>
+            <li>Definen los registros DNS que indican cómo se debe resolver un dominio específico.</li>
+          </ul>
+        </section>
+        <section>
+          <p><strong>Tipos de Registros en Tablas de Zonas</strong></p>
+          <ul>
+            <li><strong>A:</strong> Dirección IPv4 de un dominio.</li>
+            <li><strong>AAAA:</strong> Dirección IPv6 de un dominio.</li>
+            <li><strong>CNAME:</strong> Alias para otro dominio.</li>
+            <li><strong>MX:</strong> Servidores de correo electrónico.</li>
+            <li><strong>TXT:</strong> Información adicional, como verificación de dominios.</li>
+          </ul>
+        </section>
+        <section>
+          <p><strong>Ejemplo de una Tabla de Zonas</strong></p>
+          <pre><code>example.local. IN A 192.168.1.1
+  mail.example.local. IN MX 10 mailserver.local.
+  example.local. IN CNAME www.example.local.</code></pre>
+        </section>
+      </section>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+  <script>
+    Reveal.initialize();
+  </script>
+
+</body>
+
+</html>
