@@ -1,0 +1,156 @@
+<html lang="en" class="reveal-full-page"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación: Comandos CLI Básicos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/moon.min.css">
+</head>
+<body class="reveal-viewport" style="--slide-width: 960px; --slide-height: 700px; --slide-scale: 0.40594285714285716;">
+    <div class="reveal slide center focused has-vertical-slides has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="fade" style="">
+        <div class="slides" style="width: 960px; height: 700px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(0.405943);">
+
+            <!-- Introducción -->
+            <section style="top: 123px; display: block;" class="present" data-index-h="0">
+                <h1>Comandos CLI Básicos</h1>
+                <p>Comandos para trabajar en sistemas sin interfaz gráfica.</p>
+            </section>
+
+            <!-- Navegación por directorios -->
+            <section style="top: 0px; display: block;" class="stack future" data-previous-indexv="0" hidden="" aria-hidden="true" data-index-h="1">
+                <section style="top: 299px; display: block;" class="" aria-hidden="true" data-index-h="1" data-index-v="0">
+                    <h2>Navegación por Directorios</h2>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 189.5px; display: block;" hidden="" data-index-h="1" data-index-v="1">
+                    <h3>pwd</h3>
+                    <p><strong>Significado:</strong> Print Working Directory</p>
+                    <p>Muestra la ruta actual del directorio.</p>
+                    <pre style="background-color: white;"><code>$ pwd
+/home/usuario</code></pre>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 0px; display: none;" hidden="" data-index-h="1" data-index-v="2">
+                    <h3>ls</h3>
+                    <p><strong>Significado:</strong> List Directory Contents</p>
+                    <p>Lista archivos y carpetas en el directorio actual.</p>
+                    <pre style="background-color: white;"><code>$ ls
+documentos fotos descargas</code></pre>
+                    <p>Opciones útiles:</p>
+                    <ul>
+                        <li><code>ls -l</code>: Muestra detalles como permisos y tamaños.</li>
+                        <li><code>ls -a</code>: Incluye archivos ocultos.</li>
+                    </ul>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 0px; display: none;" hidden="" data-index-h="1" data-index-v="3">
+                    <h3>cd</h3>
+                    <p><strong>Significado:</strong> Change Directory</p>
+                    <p>Cambia al directorio especificado.</p>
+                    <pre style="background-color: white;"><code>$ cd documentos
+$ pwd
+/home/usuario/documentos</code></pre>
+                    <p>Volver al directorio anterior:</p>
+                    <pre style="background-color: white;"><code>$ cd ..</code></pre>
+                </section>
+            </section>
+
+            <!-- Manipulación de Archivos y Directorios -->
+            <section style="top: 0px; display: block;" class="stack future" data-previous-indexv="0" hidden="" aria-hidden="true" data-index-h="2">
+                <section style="top: 248.5px; display: block;" class="" aria-hidden="true" data-index-h="2" data-index-v="0">
+                    <h2>Manipulación de Archivos y Directorios</h2>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 0px; display: none;" hidden="" data-index-h="2" data-index-v="1">
+                    <h3>mkdir</h3>
+                    <p><strong>Significado:</strong> Make Directory</p>
+                    <p>Crea un nuevo directorio.</p>
+                    <pre style="background-color: white;"><code>$ mkdir nueva_carpeta</code></pre>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 0px; display: none;" hidden="" data-index-h="2" data-index-v="2">
+                    <h3>touch</h3>
+                    <p>Crea un archivo vacío.</p>
+                    <pre style="background-color: white;"><code>$ touch archivo.txt</code></pre>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 0px; display: none;" hidden="" data-index-h="2" data-index-v="3">
+                    <h3>cp</h3>
+                    <p><strong>Significado:</strong> Copy</p>
+                    <p>Copia un archivo o directorio.</p>
+                    <pre style="background-color: white;"><code>$ cp archivo.txt copia_archivo.txt</code></pre>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 0px; display: none;" hidden="" data-index-h="2" data-index-v="4">
+                    <h3>mv</h3>
+                    <p><strong>Significado:</strong> Move</p>
+                    <p>Mueve o renombra un archivo.</p>
+                    <pre style="background-color: white;"><code>$ mv archivo.txt carpeta/</code></pre>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 0px; display: none;" hidden="" data-index-h="2" data-index-v="5">
+                    <h3>rm</h3>
+                    <p><strong>Significado:</strong> Remove</p>
+                    <p>Elimina archivos o carpetas.</p>
+                    <pre style="background-color: white;"><code>$ rm archivo.txt</code></pre>
+                    <p>Eliminar carpetas con contenido:</p>
+                    <pre style="background-color: white;"><code>$ rm -r carpeta</code></pre>
+                </section>
+            </section>
+
+            <!-- Visualización de Contenido -->
+            <section style="top: 0px; display: none;" class="stack future" data-previous-indexv="0" hidden="" aria-hidden="true" data-index-h="3">
+                <section style="top: 0px; display: none;" class="" aria-hidden="true" data-index-h="3" data-index-v="0">
+                    <h2>Visualización de Contenido</h2>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 0px; display: none;" hidden="" data-index-h="3" data-index-v="1">
+                    <h3>cat</h3>
+                    <p>Muestra el contenido de un archivo.</p>
+                    <pre style="background-color: white;"><code>$ cat archivo.txt</code></pre>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 0px; display: none;" hidden="" data-index-h="3" data-index-v="2">
+                    <h3>head</h3>
+                    <p>Muestra las primeras líneas de un archivo.</p>
+                    <pre style="background-color: white;"><code>$ head archivo.txt</code></pre>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 0px; display: none;" hidden="" data-index-h="3" data-index-v="3">
+                    <h3>tail</h3>
+                    <p>Muestra las últimas líneas de un archivo.</p>
+                    <pre style="background-color: white;"><code>$ tail archivo.txt</code></pre>
+                </section>
+            </section>
+
+            <!-- Permisos y Propietarios -->
+            <section style="top: 0px; display: none;" class="stack future" data-previous-indexv="0" hidden="" aria-hidden="true" data-index-h="4">
+                <section style="top: 0px; display: none;" class="" aria-hidden="true" data-index-h="4" data-index-v="0">
+                    <h2>Permisos y Propietarios</h2>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 0px; display: none;" hidden="" data-index-h="4" data-index-v="1">
+                    <h3>chmod</h3>
+                    <p><strong>Significado:</strong> Change Mode</p>
+                    <p>Cambia los permisos de un archivo.</p>
+                    <pre style="background-color: white;"><code>$ chmod 755 archivo.txt</code></pre>
+                    <p>Permisos comunes:</p>
+                    <ul>
+                        <li><code>755</code>: Lectura, escritura y ejecución para el propietario; solo lectura y ejecución para otros.</li>
+                        <li><code>644</code>: Lectura y escritura para el propietario; solo lectura para otros.</li>
+                        <li><code>777</code>: Lectura, escritura y ejecución para todos.</li>
+                    </ul>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 0px; display: none;" hidden="" data-index-h="4" data-index-v="2">
+                    <h3>chown</h3>
+                    <p><strong>Significado:</strong> Change Owner</p>
+                    <p>Cambia el propietario de un archivo.</p>
+                    <pre style="background-color: white;"><code>$ chown usuario archivo.txt</code></pre>
+                </section>
+            </section>
+
+            <!-- Ejercicios -->
+            <section style="top: 0px; display: none;" class="future" hidden="" aria-hidden="true" data-index-h="5">
+                <h2>Ejercicio</h2>
+                <p><a href="https://github.com/denn1s/command-line-clue" target="_blank">https://github.com/denn1s/command-line-clue</a></p>
+            </section>
+
+        </div>
+    <div class="slide-number" style="display: none;"></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left" aria-label="previous slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Comandos CLI Básicos Comandos para trabajar en sistemas sin interfaz gráfica. </div><div class="backgrounds"><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background stack future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="slide-background stack future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="slide-background stack future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="slide-background stack future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div></div></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+        Reveal.initialize();
+    </script>
+
+
+</body></html>

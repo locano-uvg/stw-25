@@ -12,6 +12,8 @@ PROJECT DESCRIPTION
 
 STW 25 es un repositorio diseñado para la gestión de material del curso Sistemas y Tenologias Web, del año 2025. En este repositorio se encontraran los ejercicios y ejemplos de la clase, asi como la documentacion del contenido de la clase.
 
+* https://locano-uvg.github.io/stw-25/
+
 
 ## ✨ Características
 
