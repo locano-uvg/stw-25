@@ -10,5 +10,12 @@ export const presentations = [
         description: "Comandos básicos de Linux",
         path: "temas/cli/index.html",
         image: "temas/cli/images/cli.png"
+    },
+    {
+        title: "Tema 3",
+        description: "Introducción a GIT",
+        path: "temas/github/index.html",
+        image: "temas/github/images/git.jpg"
     }
+
 ];

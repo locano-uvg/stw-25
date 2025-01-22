@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introducción a Git y GitHub</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/moon.min.css"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Introducción -->
+        <section>
+          <h1>Introducción a Git y GitHub</h1>
+          <p>Control de versiones y colaboración de proyectos!</p>
+        </section>
+
+        <!-- ¿Qué es Git? -->
+        <section>
+          <section>
+            <h2>¿Qué es Git?</h2>
+          </section>
+          <section>
+            <p><b>¿Qué es Git?</b></p>
+            <ul>
+              <li>Es un sistema de control de versiones distribuido.</li>
+              <li>Permite rastrear cambios en el código fuente.</li>
+              <li>Facilita la colaboración en proyectos de software.</li>
+              <li>Creado por Linus Torvalds en 2005.</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- ¿Qué es GitHub? -->
+        <section>
+          <section>
+            <h2>¿Qué es GitHub?</h2>
+          </section>
+          <section>
+            <p><b>¿Qué es GitHub?</b></p>
+            <ul>
+              <li>Una plataforma basada en Git para colaborar en proyectos.</li>
+              <li>Ofrece un espacio en la nube para alojar repositorios.</li>
+              <li>
+                Incluye herramientas adicionales como issues, pull requests y
+                wikis.
+              </li>
+              <li>Ideal para proyectos de código abierto y privados.</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- Comandos básicos de Git -->
+        <section>
+          <section>
+            <h2>Comandos básicos de Git</h2>
+          </section>
+          <section>
+            <p><b>Comandos básicos de Git</b></p>
+            <ul>
+              <li>
+                Inicializar un repositorio:
+                <pre><code>git init</code></pre>
+              </li>
+              <li>
+                Agregar cambios al área de preparación:
+                <pre><code>git add .</code></pre>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <p><b>Comandos básicos de Git</b></p>
+            <ul>
+              <li>
+                Hacer un commit:
+                <pre><code>git commit -m "Mensaje del commit"</code></pre>
+              </li>
+              <li>
+                Ver el historial de cambios:
+                <pre><code>git log</code></pre>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- Cómo clonar repositorios -->
+        <section>
+          <section>
+            <h2>Clonación de repositorios</h2>
+          </section>
+          <section>
+            <p>
+              Clonar un repositorio es descargar su contenido a tu máquina
+              local.
+            </p>
+            <pre><code>git clone URL_DEL_REPOSITORIO</code></pre>
+            <p>Ejemplo:</p>
+            <pre><code>git clone https://github.com/usuario/repo.git</code></pre>
+          </section>
+        </section>
+
+        <!-- Cómo hacer push y commits -->
+        <section>
+          <section>
+            <h2>Commits y push</h2>
+          </section>
+          <section>
+            <strong>Commits</strong>
+            <p>Nos sirven para guardar los cambios en tu repositorio local:</p>
+            <ul>
+              <li>
+                <pre><code>
+  git add .
+  git commit -m "Descripción de los cambios"
+                </code></pre>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <strong>Push</strong>
+            <p>
+              Nos sirve para enviar los cambios al repositorio remoto (GitHub):
+            </p>
+            <ul>
+              <li>
+                <pre><code>git push origin main</code></pre>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- Cierre -->
+        <section>
+          <h2>Conclusión</h2>
+          <p>
+            ¡Con Git y GitHub, puedes organizar tu código y colaborar
+            fácilmente!
+          </p>
+          <p>¿Listos para empezar?</p>
+        </section>
+
+        <section>
+          <h2>Extra</h2>
+          <a href="https://www.linkedin.com/pulse/day-15-introduction-git-github-commands-brief-simple-example-kanna-sle3f/">
+            Lectura Comandos básicos
+          </a>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+      Reveal.initialize();
+    </script>
+  </body>
+</html>
