@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introducción a las Servidores de Web</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/moon.min.css"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Introducción a los Servidores de Web</h1>
+        </section>
+        <section>
+          <section>
+            <h2>Objetivo principal</h2>
+            <p>
+              Explicar lo que son y cómo funcionan los servidores de web, así
+              como tipos y funciones principales.
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <h2>Introducción</h2>
+          <p>
+            Un servidor web es una herramienta que permite publicar página web y
+            la creación de entornos interactivos.
+          </p>
+        </section>
+
+        <section>
+          <h2>Tipos de Servidores de Web</h2>
+          <ul>
+            <li>Apache</li>
+            <li>Microsoft Internet Server (MIS)</li>
+            <li>Nginx</li>
+            <li>Elasticache</li>
+            <li>Firewal 2</li>
+          </ul>
+        </section>
+
+        <section>
+          <section>
+            <h2>Factores importantes</h2>
+          </section>
+          <section>
+            <p>
+              Algunos factores a considerar al elegir un servidor web incluyen
+              la capacidad, el coste, la escalabilidad, la disponibilidad, y la
+              compatibilidad con otros servicios.
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Web Servers en la Nube</h2>
+          </section>
+          <section>
+            <p>
+              La nube ofrece una serie de beneficios para los hosted de servidor
+              web, incluyendo accesibilidad, escalabilidad, seguridad avanzada y
+              un entorno más eficiente para el mantenimiento.
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Configuración de un Servidor Web (AWS)</h2>
+          </section>
+          <section>
+            <ol>
+              <li>Access Account in AWS.</li>
+              <li>Create a new Instance in EC2.</li>
+              <li>Add the necessary Security Groups.</li>
+            </ol>
+          </section>
+          <section>
+            <h2>Conectandonos al servidor web</h2>
+          </section>
+          <section>
+            <ol>
+              <li>Create access keys for the instance.</li>
+              <li>Connect to the instance using SSH.</li>
+              <li>Install the necessary software.</li>
+            </ol>
+          </section>
+        </section>
+
+        <section>
+          <section><h2>Que es Nginx?</h2></section>
+          <section>
+            <p>
+              Nginx es un servidor web de código abierto que se utiliza para
+              servir contenido web y aplicaciones.
+            </p>
+          </section>
+
+          <section>
+            <h2>Instalación de Nginx Linux</h2>
+          </section>
+          <section>
+            <pre>
+                <code> 
+                sudo apt update 
+                sudo apt install nginx 
+                </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Iniciar Nginx</h2>
+          </section>
+          <section>
+            <pre>
+                <code> 
+                sudo service nginx start 
+                sudo service nginx status 
+                </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Configuración de Nginx</h2>
+          </section>
+          <section>
+            <p>Al instalar tendremos disponible una nueva ruta llamada:</p>
+            <pre>
+                <code> 
+                /etc/nginx/nginx.conf
+                </code>
+            </pre>
+            <p>
+              Para configurar Nginx, se debe editar el archivo de configuración
+              principal, que se encuentra en:
+            </p>
+            <pre>
+                <code> 
+                /etc/nginx/nginx.conf
+                </code>
+            </pre>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+      Reveal.initialize();
+    </script>
+  </body>
+</html>

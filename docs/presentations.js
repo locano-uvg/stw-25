@@ -16,6 +16,18 @@ export const presentations = [
         description: "Introducción a GIT",
         path: "temas/github/index.html",
         image: "temas/github/images/git.jpg"
+    },
+    {
+        title: "Tema 4",
+        description: "Web Servers",
+        path: "temas/web_servers/index.html",
+        image: "temas/web_servers/images/web_server.jpg"
+    },
+    {
+        title: "Tema extra",
+        description: "IA Generativa",
+        path: "temas/ia_code/index.html",
+        image: "temas/ia_code/images/ia_code.jpeg"
     }
 
 ];

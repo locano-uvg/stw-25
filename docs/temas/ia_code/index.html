@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introducción a la IA Generativa</title>
+    <!-- tutorial https://dev.to/lunaticprogrammer/using-deepseek-r1-in-visual-studio-code-for-free-2279-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/moon.min.css"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Introducción a la IA Generativa</h1>
+        </section>
+        <section>
+          <p>
+            Aprenderemos cómo podemos usar inteligencia artificial para generar
+            código automáticamente.
+          </p>
+        </section>
+        <section>
+          <section><h2>¿Qué es la IA Generativa?</h2></section>
+          <section>
+            <p>
+              La Inteligencia Artificial Generativa (IAG) es una disciplina que
+              se ocupa de desarrollar sistemas que generen contenido humano,
+              como texto, código o imágenes, con un nivel de calidad similar al
+              humano. Los sistemas de IA Generativa se basan en técnicas de
+              aprendizaje automático, gradients y Redes Neuronales Generativas
+              (GANS).
+            </p>
+          </section>
+        </section>
+        <section>
+            <section><h2>¿Qué son los LLM?</h2></section>
+            <section>
+              <p>
+                Los LLM (Lenguaje de Modelos de Lenguaje) son un tipo de modelo
+                de IA Generativa que se especializa en la generación de texto
+                natural. Los LLM son capaces de aprender patrones de lenguaje
+                humano a partir de grandes cantidades de datos y generar texto
+                coherente y relevante en función de estos patrones.
+              </p>
+            </section>
+          </section>
+        <section>
+          <section><h3>¿Qué es Ollama?</h3></section>
+          <section>
+            <p>
+              Ollama es una plataforma de desarrollo de código para aplicaciones
+              de IA Generativa que simplifica el proceso de crear, trainear y
+              depurar modelos de IA. Con Ollama, los desarrolladores pueden
+              acceder a una gran variedad de datasets de entrenamiento y
+              herramientas de visualización y monitoreo integral.
+              <br />
+              Es ideal para iniciantes que quisieran Integrar IA en sus
+              proyectos sin tenir que implementar from ScratchEverything.
+            </p>
+          </section>
+        </section>
+        <section>
+          <section><h3>¿Cómo instalar Ollama?</h3></section>
+          <section>
+            <p>Para instalar Ollama, sigue estos pasos:</p>
+            <ul>
+              <li>
+                Descarga y instala el Repositorio de Software Offcial para
+                Ollama desde https://ollama.ai/stable/repo.html.
+              </li>
+              <li>Configura tu cuenta de usuario en la GUI de Ollama.</li>
+              <li>
+                Finalmente, verifica la instalación ejecutando los comandos de
+                verificación proporcionados por Ollama.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <p>Validación de instalación</p>
+            <ul>             
+              <li>
+                <pre>
+                    <code>ollama pull 'llm_model'</code>
+                </pre>
+              </li>
+              <li>
+                <pre>
+                    <code>curl http://localhost:11434/api/generate -d '{
+                "model": "deepseek-r1:latest",
+                "prompt": "Why is the sky blue?"
+                 }'</code>
+                </pre>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section><h3>¿Qué es Continue?*</h3></section>
+          <section>
+            <p>
+              Continue es una extensión de VS Code diseñada para el desarrollo
+              de código con IA Generativa. Con Continue, los desarrolladores
+              pueden acceder a una interfaz integrada para interactuar con los
+              modelos de IA, visualizar su proceso de entrenamiento y hacer
+              predicciones automáticas sobre código o textos basados en sus
+              patrones históricos.
+            </p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>¿Cómo configurar Continue con Ollama?</h3>
+          </section>
+          <section>
+            <p>
+              Para configurar Continue con Ollama, sigue estos pasos:
+            </p>
+            <ul>
+                <li>
+                    Descarga e instala la extensión de VS Code de Continue desde el
+                    Marketplace de Visual Studio.
+                </li>
+                <li>
+                    Configura tu cuenta de usuario en la GUI de Ollama.
+                </li>
+                <li>
+                    Finalmente, verifica la instalación ejecutando los comandos de
+                    verificación proporcionados por Ollama.
+                </li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+      Reveal.initialize();
+    </script>
+  </body>
+</html>
