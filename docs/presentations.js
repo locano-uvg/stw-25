@@ -24,6 +24,12 @@ export const presentations = [
         image: "temas/web_servers/images/web_server.jpg"
     },
     {
+        title: "Tema 5",
+        description: "HTML",
+        path: "temas/html/index.html",
+        image: "temas/html/images/html.jpeg"
+    },
+    {
         title: "Tema extra",
         description: "IA Generativa",
         path: "temas/ia_code/index.html",
