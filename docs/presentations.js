@@ -32,8 +32,8 @@ export const presentations = [
     {
         title: "SCP",
         description: "Tema 6",
-        path: "temas/html/csp.html",
-        image: "temas/html/images/rsync-scp.jpeg"
+        path: "temas/scp/csp.html",
+        image: "temas/scp/images/rsync-scp.jpeg"
     },
     {
         title: "IA Generativa",
