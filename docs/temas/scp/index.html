@@ -1,0 +1,296 @@
+<html class="reveal-full-page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSYNC y SCP</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/dracula.min.css"
+    />
+  </head>
+  <body
+    class="reveal-viewport"
+    style="
+      --slide-width: 960px;
+      --slide-height: 700px;
+      --slide-scale: 1.2809142857142857;
+    "
+  >
+    <div
+      class="reveal slide center focused has-vertical-slides has-horizontal-slides ready"
+      role="application"
+      data-transition-speed="default"
+      data-background-transition="fade"
+      style="cursor: none"
+    >
+      <div
+        class="slides"
+        style="
+          width: 960px;
+          height: 700px;
+          inset: 50% auto auto 50%;
+          transform: translate(-50%, -50%) scale(1.28091);
+        "
+      >
+        <section style="top: 251px; display: block" class="present">
+          <h2><code>rsync</code> / <code>scp</code></h2>
+          <p>Transferencia de archivos entre servidores</p>
+        </section>
+
+        <section
+          style="top: 0px; display: block"
+          hidden=""
+          aria-hidden="true"
+          class="stack future"
+        >
+          <section style="top: 249.5px; display: block">
+            <h2><code>scp</code></h2>
+            <h3>Secure Copy Protocol</h3>
+          </section>
+          <section
+            class="future"
+            aria-hidden="true"
+            style="top: 193.5px; display: block"
+          >
+            <p>
+              Permite copiar archivos de manera segura entre equipos utilizando
+              SSH.
+            </p>
+            <pre><code>scp archivo.txt usuario@servidor:/ruta/destino/</code></pre>
+            <pre><code>scp -P xx archivo.txt usuario@servidor:/ruta/destino/</code></pre>
+            <pre><code>scp -P xx -r carpeta usuario@servidor:/ruta/destino/</code></pre>
+          </section>
+          <section
+            class="future"
+            aria-hidden="true"
+            style="top: 350px; display: none"
+          >
+            <h3>Usos</h3>
+            <ul>
+              <li>Copiar archivo a un servidor remoto.</li>
+              <li>Copiar una carpeta completa.</li>
+              <li>Copiar archivo desde un servidor remoto.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section
+          style="top: 0px; display: block"
+          hidden=""
+          aria-hidden="true"
+          class="stack future"
+        >
+          <section style="top: 249.5px; display: block">
+            <h2><code>rsync</code></h2>
+            <h3>Remote Sync</h3>
+          </section>
+          <section
+            class="future"
+            aria-hidden="true"
+            style="top: 350px; display: none"
+          >
+            <p>Sincroniza archivos y directorios de manera eficiente.</p>
+            <pre><code>rsync -avz archivo.txt usuario@servidor:/ruta/destino/</code></pre>
+            <pre><code>rsync -avz -e "ssh -p xx" archivo.txt ubuntu@servidor:/ruta/destino</code></pre>
+          </section>
+          <section
+            class="future"
+            aria-hidden="true"
+            style="top: 350px; display: none"
+          >
+            <h3>Opciones</h3>
+            <ul>
+              <li><code>-a</code>: Preserva permisos y tiempos.</li>
+              <li><code>-v</code>: Muestra información detallada.</li>
+              <li><code>-z</code>: Comprime datos.</li>
+              <li><code>--progress</code>: Muestra progreso.</li>
+            </ul>
+          </section>
+          <section
+            class="future"
+            aria-hidden="true"
+            style="top: 350px; display: none"
+          >
+            <h2>Usos</h2>
+            <ul>
+              <li>Sincronizar carpeta con un servidor remoto.</li>
+              <li>Hacer un backup incremental.</li>
+              <li>Excluir archivos innecesarios.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section
+          style="top: 350px; display: none"
+          hidden=""
+          aria-hidden="true"
+          class="future"
+        >
+          <h2>Comparación <code>scp</code> vs <code>rsync</code></h2>
+          <table style="color: white">
+            <tbody>
+              <tr>
+                <th>Característica</th>
+                <th><code>scp</code></th>
+                <th><code>rsync</code></th>
+              </tr>
+              <tr>
+                <td>Transferencia segura</td>
+                <td>✅</td>
+                <td>✅</td>
+              </tr>
+              <tr>
+                <td>Sincronización</td>
+                <td>❌</td>
+                <td>✅</td>
+              </tr>
+              <tr>
+                <td>Compresión</td>
+                <td>❌</td>
+                <td>✅</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section
+          style="top: 350px; display: none"
+          hidden=""
+          aria-hidden="true"
+          class="future"
+        >
+          <h2>5. Conclusión</h2>
+          <p><code>scp</code> es ideal para copias simples.</p>
+          <p>
+            <code>rsync</code> es más eficiente para sincronización y backups.
+          </p>
+        </section>
+      </div>
+      <div class="backgrounds">
+        <div
+          class="slide-background present"
+          data-loaded="true"
+          style="display: block"
+        >
+          <div class="slide-background-content"></div>
+        </div>
+        <div
+          class="slide-background stack future"
+          data-loaded="true"
+          style="display: block"
+        >
+          <div class="slide-background-content"></div>
+          <div
+            class="slide-background present"
+            data-loaded="true"
+            style="display: block"
+          >
+            <div class="slide-background-content"></div>
+          </div>
+          <div
+            class="slide-background future"
+            data-loaded="true"
+            style="display: block"
+          >
+            <div class="slide-background-content"></div>
+          </div>
+          <div class="slide-background future" style="display: none">
+            <div class="slide-background-content"></div>
+          </div>
+        </div>
+        <div
+          class="slide-background stack future"
+          data-loaded="true"
+          style="display: block"
+        >
+          <div class="slide-background-content"></div>
+          <div
+            class="slide-background present"
+            data-loaded="true"
+            style="display: block"
+          >
+            <div class="slide-background-content"></div>
+          </div>
+          <div class="slide-background future" style="display: none">
+            <div class="slide-background-content"></div>
+          </div>
+          <div class="slide-background future" style="display: none">
+            <div class="slide-background-content"></div>
+          </div>
+          <div class="slide-background future" style="display: none">
+            <div class="slide-background-content"></div>
+          </div>
+        </div>
+        <div class="slide-background future" style="display: none">
+          <div class="slide-background-content"></div>
+        </div>
+        <div class="slide-background future" style="display: none">
+          <div class="slide-background-content"></div>
+        </div>
+      </div>
+      <div class="slide-number" style="display: none"></div>
+      <aside
+        class="controls"
+        data-controls-layout="bottom-right"
+        data-controls-back-arrows="faded"
+        style="display: block"
+      >
+        <button
+          class="navigate-left"
+          aria-label="previous slide"
+          disabled="disabled"
+        >
+          <div class="controls-arrow"></div>
+        </button>
+        <button
+          class="navigate-right enabled highlight"
+          aria-label="next slide"
+        >
+          <div class="controls-arrow"></div>
+        </button>
+        <button
+          class="navigate-up"
+          aria-label="above slide"
+          disabled="disabled"
+        >
+          <div class="controls-arrow"></div>
+        </button>
+        <button
+          class="navigate-down"
+          aria-label="below slide"
+          disabled="disabled"
+        >
+          <div class="controls-arrow"></div>
+        </button>
+      </aside>
+      <div class="progress" style="display: block">
+        <span style="transform: scaleX(0)"></span>
+      </div>
+      <div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div>
+      <div class="pause-overlay">
+        <button class="resume-button">Resume presentation</button>
+      </div>
+      <div
+        class="aria-status"
+        aria-live="polite"
+        aria-atomic="true"
+        style="
+          position: absolute;
+          height: 1px;
+          width: 1px;
+          overflow: hidden;
+          clip: rect(1px, 1px, 1px, 1px);
+        "
+      >
+        rsync / scp Transferencia de archivos entre servidores
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+      Reveal.initialize();
+    </script>
+  </body>
+</html>

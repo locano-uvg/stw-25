@@ -20,9 +20,10 @@
         <section>
           <h1 id="introduccion">Introducción al HTML</h1>
         </section>
+        <!-- QUÉ ES -->
         <section>
           <section>
-            <h2 id="què_es_html">¿Qué es HTML?</h2>
+            <h2>¿Qué es HTML?</h2>
           </section>
           <section>
             <p>
@@ -33,17 +34,7 @@
             </p>
           </section>
         </section>
-        <section>
-          <section>
-            <h2 id="estructura_de_html">Estructura general del HTML</h2>
-          </section>
-          <section>
-            <img
-              src="./images/estructura_html.png"
-              alt="Elementos semánticos de HTML"
-            />
-          </section>
-        </section>
+        <!-- SEMANTICA -->
         <section>
           <section>
             <h3 id="etiquetas_de cabecera">Etiquetas Semánticas</h3>
@@ -51,8 +42,12 @@
           <section>
             <p>
               Las etiquetas semánticas son elementos de HTML que se utilizan
-              para estructurar el contenido de una página web. Estas etiquetas
-              permiten a los motores de búsqueda y a los navegadores web
+              para estructurar el contenido de una página web.
+            </p>
+          </section>
+          <section>
+            <p>
+              Permiten a los motores de búsqueda y a los navegadores web
               interpretar el contenido de una página web de manera más precisa.
             </p>
           </section>
@@ -102,7 +97,8 @@
           <section>
             <img
               src="./images/etiquetas_semanticas_html.png"
-              alt="Elementos semánticos de HTML">
+              alt="Elementos semánticos de HTML"
+            />
           </section>
         </section>
         <section id="conclusion">
@@ -112,6 +108,243 @@
             presentaciones electrónicas. Con sus componentes básicos, se puede
             estructurar información de manera clara y organizada.
           </p>
+        </section>
+        <!-- ESTRUCTURA BÁSICA -->
+        <section>
+          <section>
+            <h2 id="estructura_de_html">Estructura general del HTML</h2>
+          </section>
+          <section>
+            <pre><code>
+              &lt;!DOCTYPE html&gt;
+              &lt;html lang="es"&gt;
+              &lt;head&gt;
+                  &lt;meta charset="UTF-8"&gt;
+                  &lt;title&gt;Mi Página&lt;/title&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                  &lt;h1&gt;Hola, mundo!&lt;/h1&gt;
+                  &lt;p&gt;Bienvenido a mi página web.&lt;/p&gt;
+              &lt;/body&gt;
+              &lt;/html&gt;</code></pre>
+          </section>
+        </section>
+        <!-- ELEMENTOS BÁSICOS -->
+        <section>
+          <h2>Elementos de HTML</h2>
+          <ul>
+            <li>
+              Elementos de bloque: &lt;div&gt;, &lt;p&gt;,
+              &lt;h1&gt;-&lt;h6&gt;, &lt;section&gt;, &lt;article&gt;
+            </li>
+            <li>
+              Elementos en línea: &lt;span&gt;, &lt;a&gt;, &lt;strong&gt;,
+              &lt;em&gt;, &lt;img&gt;
+            </li>
+          </ul>
+        </section>
+        <!-- ETIQUETAS BÁSICAS -->
+        <section>
+          <section>
+            <h2>Etiquetas Básicas</h2>
+          </section>
+          <section>
+            <h3>Encabezados y Párrafos</h3>
+            <pre><code>&lt;h1&gt;Título Principal&lt;/h1&gt;
+&lt;p&gt;Este es un párrafo de texto.&lt;/p&gt;</code></pre>
+          </section>
+          <section>
+            <h3>Imágenes</h3>
+            <pre><code>&lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;</code></pre>
+          </section>
+          <section>
+            <h3>Enlaces</h3>
+            <pre><code>&lt;a href="pagina.html"&gt;Ir a otra página&lt;/a&gt;</code></pre>
+          </section>
+          <section>
+            <h3>Listas</h3>
+            <pre><code>&lt;ul&gt;
+&lt;li&gt;Elemento 1&lt;/li&gt;
+&lt;li&gt;Elemento 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+          </section>
+        </section>
+        <!-- TABLAS -->
+        <section>
+          <section>
+            <h2>Tablas en HTML</h2>
+          </section>
+          <section>
+            <p>Ejemplo de tabla básica:</p>
+            <pre><code>
+&lt;table&gt;
+&lt;tr&gt;
+  &lt;th&gt;Producto&lt;/th&gt;
+  &lt;th&gt;Precio&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;Manzana&lt;/td&gt;
+  &lt;td&gt;$1.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+              </code></pre>
+          </section>
+          <section>
+            <h2>Uso de thead, tbody y tfoot</h2>
+            <pre><code>
+&lt;table&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+      &lt;th&gt;Producto&lt;/th&gt;
+      &lt;th&gt;Precio&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+      &lt;td&gt;Manzana&lt;/td&gt;
+      &lt;td&gt;$1.00&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tfoot&gt;
+  &lt;tr&gt;
+      &lt;td&gt;Total&lt;/td&gt;
+      &lt;td&gt;$1.00&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tfoot&gt;
+&lt;/table&gt;
+              </code></pre>
+          </section>
+        </section>
+        <!-- FORMULARIOS -->
+        <section>
+          <section>
+            <h2>Formularios</h2>
+          </section>
+          <section>
+            <p>Ejemplo de formulario:</p>
+            <pre><code>
+&lt;form&gt;
+&lt;label&gt;Nombre: &lt;input type="text" name="nombre" required&gt;&lt;/label&gt;&lt;br&gt;
+&lt;label&gt;Email: &lt;input type="email" name="email"&gt;&lt;/label&gt;&lt;br&gt;
+&lt;label&gt;Fecha de nacimiento: &lt;input type="date" name="nacimiento"&gt;&lt;/label&gt;&lt;br&gt;
+&lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;
+              </code></pre>
+          </section>
+        </section>
+        <!-- LISTAS Y MENÚS -->
+        <section>
+          <section>
+            <h2>Listas y Menús</h2>
+          </section>
+          <section>
+            <p>Ejemplo de lista anidada:</p>
+            <pre><code>
+&lt;ul&gt;
+&lt;li&gt;Frutas
+  &lt;ul&gt;
+      &lt;li&gt;Manzana&lt;/li&gt;
+      &lt;li&gt;Banana&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+              </code></pre>
+          </section>
+        </section>
+        <!-- RUTAS -->
+        <section>
+          <section>
+            <h2>Paths Absolutos vs Relativos</h2>
+          </section>
+          <section>
+            <h3>Diferencias entre rutas absolutas y relativas</h3>
+            <p>
+              <strong>Ruta Absoluta:</strong> Contiene la ubicación completa del
+              archivo.
+            </p>
+            <pre><code>&lt;img src="C:/Users/Usuario/Desktop/imagen.jpg"&gt;</code></pre>
+            <p>
+              <strong>Ruta Relativa:</strong> Ubicación basada en la estructura
+              del proyecto.
+            </p>
+            <pre><code>&lt;img src="imagenes/imagen.jpg"&gt;</code></pre>
+          </section>
+          <section>
+            <h3>Errores comunes con rutas absolutas</h3>
+            <p>❌ <strong>Error común:</strong></p>
+            <pre><code>&lt;img src="C:/Users/Usuario/Desktop/imagen.jpg"&gt;</code></pre>
+            <p>
+              ⚠ Este enlace solo funciona en la computadora del usuario, no en
+              un servidor.
+            </p>
+            <p>✅ <strong>Solución: Usar rutas relativas</strong></p>
+            <pre><code>&lt;img src="/assets/images/logo.png"&gt;</code></pre>
+          </section>
+          <section>
+            <h3>Tipos de rutas relativas</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <th>Tipo de Ruta</th>
+                  <th>Ejemplo</th>
+                </tr>
+                <tr>
+                  <td>Mismo directorio</td>
+                  <td><code>href="index.html"</code></td>
+                </tr>
+                <tr>
+                  <td>Un nivel arriba</td>
+                  <td><code>href="../archivo.html"</code></td>
+                </tr>
+                <tr>
+                  <td>Desde la raíz</td>
+                  <td><code>href="/imagenes/logo.png"</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+        <!-- Links -->
+        <section>
+          <section>
+            <h2>Links Simbólicos en Linux y Servidores</h2>
+          </section>
+          <section>
+            <h3>¿Qué es un link simbólico?</h3>
+            <p>
+              Un <strong>link simbólico</strong> es un atajo que apunta a otro
+              archivo o carpeta.
+            </p>
+            <p>
+              Permite trabajar en <strong>cualquier carpeta</strong> sin mover
+              archivos al root del servidor.
+            </p>
+          </section>
+          <section>
+            <h3>Ejemplo de link simbólico en un servidor local</h3>
+            <p>Crear un link simbólico en <strong>Linux/macOS</strong>:</p>
+            <pre><code>ln -s /var/www/html/mis_proyectos ~/mis_proyectos</code></pre>
+            <p>
+              Ahora puedes trabajar en <code>~/mis_proyectos</code> en lugar de
+              en <code>/var/www/html</code>.
+            </p>
+          </section>
+          <section>
+            <h3>Beneficios de los links simbólicos</h3>
+            <ul>
+              <li>
+                Permite desarrollar en tu carpeta habitual sin copiar archivos
+                manualmente al servidor.
+              </li>
+              <li>
+                Evita modificar la configuración del servidor innecesariamente.
+              </li>
+              <li>
+                Facilita el trabajo en equipo sin alterar la estructura del
+                servidor.
+              </li>
+            </ul>
+          </section>
         </section>
       </div>
     </div>
