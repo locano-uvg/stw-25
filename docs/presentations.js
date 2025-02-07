@@ -32,7 +32,7 @@ export const presentations = [
     {
         title: "SCP",
         description: "Tema 6",
-        path: "temas/scp/csp.html",
+        path: "temas/scp/index.html",
         image: "temas/scp/images/rsync-scp.jpeg"
     },
     {
