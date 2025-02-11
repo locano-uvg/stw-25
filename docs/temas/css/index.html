@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introducción a CSS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/moon.min.css"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Introducción a CSS -->
+        <section>
+          <h1>Introducción a CSS</h1>
+          <p>Hoja de Estilos en Cascada</p>
+        </section>
+        <!-- QUE ES -->
+        <section>
+          <section>
+            <h2>¿Qué es CSS y por qué es importante?</h2>
+          </section>
+          <section>
+            <p>CSS define la apariencia de una página web.</p>
+            <p>Permite separar el contenido del diseño.</p>
+            <p>Facilita la reutilización y mantenimiento del código.</p>
+          </section>
+        </section>
+        <!-- TIPOS DE CSS -->
+        <section>
+          <section>
+            <h2>Tipos de CSS</h2>
+          </section>
+          <section>
+            <img src="./images/inline.webp" alt="inline" height="400" />
+            <ul>
+              <li>
+                <strong>Inline:</strong> Se aplica directamente en la etiqueta
+                con <code>style</code>.
+              </li>
+            </ul>
+            <pre><code>&lt;p style="color: red;"&gt;Texto&lt;/p&gt;</code></pre>
+          </section>
+          <section>
+            <img src="./images/style.png" alt="style" height="400" />
+            <ul>
+              <li>
+                <strong>Interno:</strong> Se define dentro de
+                <code>&lt;style&gt;</code> en el <code>head</code>.
+              </li>
+            </ul>
+            <pre><code>&lt;style&gt; p { color: red; } &lt;/style&gt;</code></pre>
+          </section>
+          <section>
+            <img src="./images/link.png" alt="link" height="400" />
+            <ul>
+              <li>
+                <strong>Externo:</strong> Se usa un archivo
+                <code>.css</code> enlazado con <code>&lt;link&gt;</code>.
+              </li>
+            </ul>
+            <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+          </section>
+          <section>
+            <img src="./images/styles.png" alt="styles" />
+          </section>
+        </section>
+        <!-- CLASES & ID -->
+        <section>
+          <section>
+            <h2>Clases e ID en CSS</h2>
+          </section>
+          <section>
+            <p>Se usan para aplicar estilos a elementos específicos.</p>
+          </section>
+          <section>
+            <table>
+              <tr>
+                <th>Clase</th>
+                <th>ID</th>
+              </tr>
+              <tr>
+                <td>Se aplica a varios elementos.</td>
+                <td>Se aplica a un solo elemento.</td>
+              </tr>
+              <tr>
+                <td>Se define con <code>.</code>.</td>
+                <td>Se define con <code>#</code>.</td>
+              </tr>
+              <tr>
+                <td>Se puede reutilizar.</td>
+                <td>Se usa una sola vez.</td>
+              </tr>
+            </table>
+          </section>
+          <section>
+            <img src="./images/clase_id.png" alt="classes" height="400" />
+
+            <h3>Ejemplos</h3>
+            <pre><code>.button { background-color: blue; }</code></pre>
+            <pre><code>#header { font-size: 24px; }</code></pre>
+          </section>
+        </section>
+        <!-- Pseudo Clases -->
+        <section>
+          <section>
+            <h2>Pseudo Clases</h2>
+          </section>
+          <section>
+            <img src="./images/pseudo_classes.png" alt="pseudo" height="400" />
+            <ul>
+              <li>
+                <strong>:hover:</strong> Se activa al pasar el cursor sobre el
+                elemento.
+              </li>
+              <li>
+                <strong>:active:</strong> Se activa al hacer clic en el
+                elemento.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Ejemplos</h3>
+            <pre><code>.button:hover { background-color: red; }</code></pre>
+            <pre><code>input:focus { border: 1px solid blue; }</code></pre>
+          </section>
+        </section>
+        <!-- COMBINADORES -->
+        <section>
+          <section>
+            <h2>Combinadores</h2>
+          </section>
+
+          <section>
+            <img
+              src="./images/combinadores.jpg"
+              alt="combinadores"
+            />
+          </section>
+
+          <section>
+            <table>
+              <tr>
+                <th>Combinador</th>
+                <th>Descripción</th>
+                <th>Ejemplo</th>
+              </tr>
+              <tr>
+                <td>Descendente</td>
+                <td>Selecciona elementos descendientes.</td>
+                <td>div p { color: red; }</td>
+              </tr>
+              <tr>
+                <td>Hijo</td>
+                <td>Selecciona elementos hijos.</td>
+                <td>div > p { color: blue; }</td>
+              </tr>
+              <tr>
+                <td>Adyacente</td>
+                <td>Selecciona elementos adyacentes.</td>
+                <td>h1 + p { font-size: 16px; }</td>
+              </tr>
+              <tr>
+                <td>General</td>
+                <td>Selecciona elementos generales.</td>
+                <td>h1 ~ p { font-size: 16px; }</td>
+              </tr>
+            </table>
+          </section>
+
+          <section>
+            <h3>Ejemplos</h3>
+            <pre><code>div p { color: red; }</code></pre>
+            <pre><code>div > p { color: blue; }</code></pre>
+            <pre><code>h1 + p { font-size: 16px; }</code></pre>
+            <pre><code>h1 ~ p { font-size: 16px; }</code></pre>
+          </section>
+        </section>
+
+        <!-- Modelo de Caja y Diseño -->
+        <section>
+          <section>
+            <h2>Box Model</h2>
+          </section>
+          <section>
+            <p>Todos los elementos en CSS son cajas.</p>
+          </section>
+          <section>
+            <img src="./images/box_model.png" alt="inline" height="200" />
+            <table>
+              <tr>
+                <th>Propiedad</th>
+                <th>Descripción</th>
+              </tr>
+              <tr>
+                <td>Margin</td>
+                <td>Espacio fuera del borde.</td>
+              </tr>
+              <tr>
+                <td>Border</td>
+                <td>Borde de la caja.</td>
+              </tr>
+              <tr>
+                <td>Padding</td>
+                <td>Espacio entre el contenido y el borde.</td>
+              </tr>
+              <tr>
+                <td>Content</td>
+                <td>Contenido del elemento.</td>
+              </tr>
+            </table>
+          </section>
+        </section>
+        <!-- Display -->
+        <section>
+          <section>
+            <h2>
+              <a
+                href="https://dev.to/lupitacode/la-propiedad-display-en-css-1b6a"
+                >Tipos de display</a
+              >
+            </h2>
+          </section>
+          <section>
+            <img
+              src="./images/display_block_inline.webp"
+              alt="inline"
+              height="250"
+            />
+            <ul>
+              <li>
+                <strong>block:</strong> Ocupa todo el ancho disponible y se
+                muestra en una nueva línea.
+              </li>
+              <li><strong>inline:</strong> Solo ocupa el ancho necesario.</li>
+            </ul>
+          </section>
+        </section>
+        <!-- Position -->
+        <section>
+          <section>
+            <h2>
+              <a
+                href="https://dev.to/akindeleemmanuel/css-positioning-simplified-for-beginners-8mi"
+              >
+                Tipos de posición
+              </a>
+            </h2>
+          </section>
+
+          <section>
+            <img
+              src="./images/css-position-all.png"
+              alt="position"
+              height="250"
+            />
+            <ul>
+              <li><strong>static:</strong> Posición por defecto.</li>
+              <li>
+                <strong>relative:</strong> Se mueve respecto a su posición
+                original.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <img
+              src="./images/css-position-all.png"
+              alt="position"
+              height="250"
+            />
+            <ul>
+              <li>
+                <strong>absolute:</strong> Se posiciona en relación a su
+                ancestro posicionado.
+              </li>
+              <li><strong>fixed:</strong> Permanece fijo en pantalla.</li>
+              <li>
+                <strong>sticky:</strong> Se comporta como relative hasta que se
+                hace sticky.
+              </li>
+            </ul>
+          </section>
+        </section>
+        <!-- Colores, Unidades y Tipografía -->
+        <section>
+          <section>
+            <h2>Unidades en CSS</h2>
+          </section>
+          <section>
+            <img src="./images/CSS-UNITS.png" alt="units" height="500" />
+          </section>
+          <section>
+            <h3>Absolutas</h3>
+            <ul>
+              <li>cm: Centímetros.</li>
+              <li>px: Píxeles. (1px = 2.54cm)</li>
+              <li>in: Pulgadas. (1in = 2.54cm)</li>
+              <li>pt: Puntos. (1pt = 1/72in)</li>
+            </ul>
+            <pre
+              class="language-css"
+            ><code>h1 { font-size: 24px; } </code></pre>
+          </section>
+          <section>
+            <h3>Relativas</h3>
+            <ul>
+              <li>%: Porcentaje.</li>
+              <li>em: Tamaño de fuente.</li>
+              <li>rem: Tamaño de fuente del root.</li>
+              <li>vw/vh: Viewport width/height dimensions</li>
+            </ul>
+            <pre class="language-css"><code>h1 { font-size: 2em; }</code></pre>
+          </section>
+        </section>
+        <!-- COLORES -->
+        <section>
+          <section>
+            <h2>Colores y Gradientes</h2>
+          </section>
+          <section>
+            <img src="./images/colors.jpg" alt="colors" height="250" />
+            <ul>
+              <li>Colores en nombres, HEX, RGB y HSL.</li>
+            </ul>
+            <pre>
+                <code>
+color: red;
+color: #ff0000;
+color: rgb(255, 0, 0);
+color: hsl(0, 100%, 50%);
+                </code>
+            </pre>
+          </section>
+          <section>
+            <img src="./images/gradiant.png" alt="colors" height="250" />
+            <ul>
+              <li>Gradientes lineales y radiales.</li>
+              <li>Uso de transparencia con <code>rgba()</code>.</li>
+            </ul>
+            <pre>
+                <code>
+background: linear-gradient(to right, red, blue);
+background: radial-gradient(circle, red, blue);
+background: rgba(0, 0, 0, 0.5);
+                </code>
+            </pre>
+          </section>
+        </section>
+        <!-- FUENTES -->
+        <section>
+          <section>
+            <h2>Fuentes y Tipografía</h2>
+          </section>
+          <section>
+            <ul>
+              <li>Uso de fuentes seguras.</li>
+              <li>Google Fonts.</li>
+            </ul>
+            <pre><code>&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;</code></pre>
+            <pre><code>font-family: Arial, sans-serif;</code></pre>
+          </section>
+          <section>
+            <table>
+              <tr>
+                <th>Propiedad</th>
+                <th>Descripción</th>
+              </tr>
+              <tr>
+                <td>font-family</td>
+                <td>Familia de fuentes.</td>
+              </tr>
+              <tr>
+                <td>font-size</td>
+                <td>Tamaño de la fuente.</td>
+              </tr>
+              <tr>
+                <td>font-weight</td>
+                <td>Grosor de la fuente.</td>
+              </tr>
+              <tr>
+                <td>font-style</td>
+                <td>Estilo de la fuente.</td>
+              </tr>
+            </table>
+          </section>
+          <section>
+            <table>
+              <tr>
+                <th>Propiedad</th>
+                <th>Descripción</th>
+              </tr>
+              <tr>
+                <td>text-align</td>
+                <td>Alineación del texto.</td>
+              </tr>
+              <tr>
+                <td>text-decoration</td>
+                <td>Decoración del texto.</td>
+              </tr>
+              <tr>
+                <td>text-transform</td>
+                <td>Transformación del texto.</td>
+              </tr>
+              <tr>
+                <td>line-height</td>
+                <td>Altura de línea.</td>
+              </tr>
+            </table>
+          </section>
+          <section>
+            <h3>Ejemplos</h3>
+            <pre><code>font-family: Arial, sans-serif;</code></pre>
+            <pre><code>font-size: 16px;</code></pre>
+            <pre><code>font-weight: bold;</code></pre>
+            <pre><code>font-style: italic;</code></pre>
+            <pre><code>text-align: center;</code></pre>
+            <pre><code>text-decoration: underline;</code></pre>
+            <pre><code>text-transform: uppercase;</code></pre>
+            <pre><code>line-height: 1.5;</code></pre>
+          </section>
+          <section>
+            <img src="./images/fonts.png" alt="fonts" height="400" />
+          </section>
+        </section>
+        <!-- Flexbox y Grid -->
+        <section>
+          <section>
+            <h2>Flexbox vs Grid</h2>
+            <p>¿Cuál usar y cuándo?</p>
+          </section>
+          <section>
+            <img src="./images/flex.png" alt="flexbox" height="250" />
+            <ul>
+              <li>Flexbox es un modelo unidimensional.</li>
+              <li>Se usa para alinear elementos en una fila o columna.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Ejemplo de Flexbox</h2>
+            <pre><code>
+  .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+                  </code></pre>
+          </section>
+          <section>
+            <img src="./images/grid.png" alt="grid" height="250" />
+            <ul>
+              <li>Grid es un modelo bidimensional.</li>
+              <li>Se usa para crear layouts complejos.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Ejemplo de Grid</h2>
+            <pre><code>
+  .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+  }
+                  </code></pre>
+          </section>
+        </section>
+        <!-- Animaciones y Transiciones -->
+        <section>
+          <section>
+            <h2>Animaciones y Transiciones</h2>
+          </section>
+          <section>
+            <ul>
+              <li><code>transition</code> para cambios suaves.</li>
+              <li><code>@keyframes</code> para animaciones avanzadas.</li>
+              <li>Optimización para rendimiento.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Ejemplo de Transición</h2>
+            <pre><code>
+  .button {
+      transition: background-color 0.5s ease-in-out;
+  }
+                  </code></pre>
+          </section>
+
+          <section>
+            <h2>Ejemplo de Animación</h2>
+            <pre><code>
+  @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+  }
+                  </code></pre>
+          </section>
+        </section>
+        <!-- Buenas Prácticas -->
+        <section>
+          <h2>Buenas Prácticas en CSS</h2>
+          <ul>
+            <li>Mantener el código organizado.</li>
+            <li>Usar nombres de clases significativos.</li>
+            <li>Evitar CSS innecesario.</li>
+            <li>Evitar el uso excesivo de <code>!important</code>.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+      Reveal.initialize();
+    </script>
+  </body>
+</html>

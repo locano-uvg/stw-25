@@ -36,6 +36,12 @@ export const presentations = [
         image: "temas/scp/images/rsync-scp.jpeg"
     },
     {
+        title: "CSS",
+        description: "Tema 7",
+        path: "temas/css/index.html",
+        image: "temas/css/images/css.png"
+    },
+    {
         title: "IA Generativa",
         description: "Tema extra",
         path: "temas/ia_code/index.html",

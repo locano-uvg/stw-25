@@ -1,0 +1,118 @@
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header fijo */
+/* El encabezado siempre está visible en la parte superior de la pantalla. */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+/* Contenedor principal */
+.container {
+    margin-top: 60px; /* Para evitar que el header tape el contenido */
+    padding: 20px;
+}
+
+/* Elemento de tipo block */
+.block {
+    display: block;
+    width: 100%;
+    background-color: lightgray;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Elementos inline e inline-block */
+.inline {
+    display: inline;
+    background-color: yellow;
+    padding: 10px;
+    margin: 5px;
+}
+
+.inline-block {
+    display: inline-block;
+    background-color: orange;
+    padding: 10px;
+    margin: 5px;
+}
+
+/* Contenedor flexible */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightblue;
+    padding: 10px;
+}
+
+.flex-item {
+    background-color: steelblue;
+    color: white;
+    padding: 15px;
+    margin: 5px;
+}
+
+/* Contenedor de Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: lightcoral;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.grid-item {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+/* Caja posicionada absolutamente */
+.absolute-box {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+}
+
+/* Caja sticky */
+.sticky-box {
+    position: sticky;
+    top: 10px;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Footer con position relative */
+.footer {
+    position: relative;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+}

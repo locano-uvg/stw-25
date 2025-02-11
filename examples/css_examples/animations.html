@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="animacion">¡Mírame!</div>
+
+    <style>
+      .animacion {
+        width: 100px;
+        height: 50px;
+        background-color: blue;
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        position: relative;
+        animation: mover 3s infinite alternate;
+      }
+
+      @keyframes mover {
+        from {
+          left: 0;
+          background-color: blue;
+        }
+        to {
+          left: 200px;
+          background-color: green;
+        }
+      }
+    </style>
+  </body>
+</html>
