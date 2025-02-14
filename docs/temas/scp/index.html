@@ -60,9 +60,8 @@
               Permite copiar archivos de manera segura entre equipos utilizando
               SSH.
             </p>
-            <pre><code>scp archivo.txt usuario@servidor:/ruta/destino/</code></pre>
-            <pre><code>scp -P xx archivo.txt usuario@servidor:/ruta/destino/</code></pre>
-            <pre><code>scp -P xx -r carpeta usuario@servidor:/ruta/destino/</code></pre>
+            <pre><code>scp -i "llave.pem" archivo.txt usuario@servidor:/ruta/destino/</code></pre>
+            <pre><code>scp -i "llave.pem" -r carpeta usuario@servidor:/ruta/destino/</code></pre>
           </section>
           <section
             class="future"
