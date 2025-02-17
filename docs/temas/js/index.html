@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/moon.min.css"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Bloque 1: Fundamentos para Contextualizar -->
+        <section>
+          <section>
+            <h2>HTML Y CSS</h2>
+          </section>
+          <section>
+            <h2>¿Qué es HTML y CSS?</h2>
+            <p>
+              HTML define la estructura y CSS el diseño visual de una página
+              web.
+            </p>
+          </section>
+
+          <section>
+            <img
+              src="./images/html.png "
+              alt="Estructura de una página web html"
+            />
+            <p>
+              Es un lenguaje de marcado (tags) que usamos para dar un
+              significado a nuestro contenido web.
+            </p>
+          </section>
+          <section>
+            <img
+              src="./images/css.png "
+              alt="Estructura de una página web css"
+            />
+            <p>
+              Lenguaje de reglas de estilo que usamos para aplicar estilo a
+              nuestro contenido HTML.
+            </p>
+          </section>
+          <section>
+            <img
+              src="./images/estructura.png "
+              alt="Estructura de una página web"
+              style="background-color: white"
+            />
+            <p>Estructura de una Página Web</p>
+          </section>
+        </section>
+
+        <!-- Bloque 2: Introducción a JavaScript -->
+        <section>
+          <section>
+            <h2>JavaScript</h2>
+          </section>
+          <section>
+            <h2>¿Qué es JavaScript?</h2>
+            <ul>
+              <li>Su primera publicación fue en 1995.</li>
+              <li>Lenguaje compilado del lado del cliente.</li>
+              <li>
+                Lenguaje que nos permite modificar contenido dentro de nuestro
+                sitio web.
+              </li>
+              <li>Lenguaje que utiliza scripts (secuencia de comandos).</li>
+            </ul>
+          </section>
+          <section>
+            <img
+              src="./images/js.png "
+              alt="Estructura de una página web js definicion"
+              width="300"
+            />
+            <ul>
+              <li>Lenguaje de programación que entienden los navegadores</li>
+              <li>Permite agregar interactividad a las páginas web.</li>
+              <li>Permite crear paginas web dinámicas.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Características</h2>
+            <ul>
+              <li>Almacenamiento de variables.</li>
+              <li>Ejecución de operaciones.</li>
+              <li>Responder a eventos.</li>
+              <li>Accionar eventos por medio del DOM.</li>
+              <li>
+                Permite crear contenido de actualización dinámica, controlar
+                multimedia, animar imágenes… casi todo.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Ejemplo:</h2>
+            <pre><code style="color: white;">
+        document.querySelector("button").addEventListener("click", function() {
+          alert("¡Botón clickeado!");
+        });
+      </code></pre>
+          </section>
+          <section>
+            <h2>Estructura</h2>
+            <ul>
+              <li>Semicolons</li>
+              <li>Statements</li>
+              <li>Comments</li>
+              <li>Variables</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- Bloque 3: Fundamentos de JavaScript -->
+        <section>
+          <section>
+            <h2>Variables</h2>
+          </section>
+          <section>
+            <h2>Variables</h2>
+            <ul>
+              <li>Es un nombre que se asigna para almacenar data.</li>
+              <li>Podemos declarar una o múltiples en una sola línea.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Declaración</h2>
+            <p>
+              Usamos <b>let</b>, <b>const</b> y <b>var</b> para declarar
+              variables.
+            </p>
+          </section>
+          <section>
+            <h3>Ejemplo:</h3>
+            <pre><code style="color: white;">
+              <b>let</b> nombre = "Juan";
+              <b>const</b> PI = 3.1416;
+              <b>var</b> edad = 25;
+</code></pre>
+            <ul>
+              <li>
+                Es recomendable usar <code style="color: white">let</code> y
+                <code style="color: white">const</code> por su alcance más
+                seguro.
+              </li>
+              <li>La diferencia es que const no cambia durante el tiempo.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Tipos de Datos</h2>
+            <p>JavaScript tiene 7 tipos de datos primitivos.</p>
+            <p>Para encontrar el tipo utilizamos <b>typeof</b></p>
+            <img src="./images/tipos.png" alt="Tipos de datos" height="400" />
+          </section>
+          <section>
+            <h2>Condicionales</h2>
+            <p>
+              Los condicionales permiten ejecutar código basado en ciertas
+              condiciones.
+            </p>
+          </section>
+          <section>
+            <h3>Ejemplo:</h3>
+            <pre><code style="color: white;">
+let edad = 18;
+if (edad >= 18) {
+  console.log("Eres mayor de edad");
+} else {
+  console.log("Eres menor de edad");
+}
+        </code></pre>
+          </section>
+        </section>
+
+        <!-- Bloque 4: DOM  -->
+        <section>
+          <section>
+            <h2>DOM</h2>
+          </section>
+          <section>
+            <h2>¿Qué es el DOM?</h2>
+            <ul>
+              <li>Document Object Model (DOM)</li>
+              <li>
+                El DOM es la estructura de objetos que representa un documento
+                HTML.
+              </li>
+              <li>El DOM representa la página web para los navegadores.</li>
+              <li>El DOM es una representación del documento HTML.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Manipulación del DOM</h2>
+            <ul>
+              <li>Maneja nuestro html como un árbol estructurado</li>
+              <li>Cada nodo representa un objeto del document.</li>
+              <li>Permite manipular los nodos por medio de la programación.</li>
+              <li>
+                JS nos permite conectar al DOM por medio del cliente (browser).
+              </li>
+            </ul>
+          </section>
+          <section>
+            <img
+              src="./images/dom1.png"
+              alt="Estructura de una página web"
+              style="background-color: white"
+            />
+          </section>
+          <section>
+            <img
+              src="./images/dom2.gif"
+              alt="Estructura de una página web nodos"
+              style="background-color: white"
+            />
+          </section>
+          <section>
+            <h3>Ejemplo:</h3>
+            <pre><code style="color: white;">
+      document.getElementById("titulo").textContent = <br>
+      "¡Hola, JavaScript!";
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <!-- Bloque 5: DOM y Nodos -->
+        <section>
+          <section>
+            <h2>Nodos del DOM</h2>
+          </section>
+          <section>
+            <h2>Acceso a nodos</h2>
+            <p>
+              Al tener nuestro árbol de DOM podremos acceder a las propiedades
+              de cada elemento, esto lo podemos realizar por medio de dos
+              métodos alternativos para acceder a un nodo específico:
+            </p>
+            <ul>
+              <li>acceso a través de sus nodos padre</li>
+              <li>acceso directo.</li>
+            </ul>
+          </section>
+          <section>
+            <p><strong>getElementByTagName</strong></p>
+            <p>
+              <strong>getElementsByTagName(nombreEtiqueta)</strong> <br />
+              obtiene todos los elementos de la página cuya etiqueta sea igual
+              que el parámetro que se le pasa a la función.
+            </p>
+            <pre>
+              <code style="color: white;">
+                let parrafos = document.getElementsByTagName("p");
+                console.log(parrafos);
+                let primer_parrafo = parrafos[0];
+                let enlaces = primer_parrafo.getElementsByTagName("a");
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p><strong>getElementById</strong></p>
+            <p>
+              <strong>getElementById(id)</strong> <br />
+              obtiene el elemento de la página cuyo atributo id sea igual al
+              parámetro que se le pasa a la función.
+            </p>
+            <pre>
+              <code style="color: white;">
+                let titulo = document.getElementById("titulo");
+                console.log(titulo);
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p><strong>getElementsByClassName</strong></p>
+            <p>
+              <strong>getElementsByClassName(nombreClase)</strong> <br />
+              obtiene todos los elementos de la página cuya clase sea igual al
+              parámetro que se le pasa a la función.
+            </p>
+            <pre>
+              <code style="color: white;">
+                let elementos = document.getElementsByClassName("parrafo");
+                console.log(elementos);
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p><strong>querySelector</strong></p>
+            <p>
+              <strong>querySelector(selector)</strong> <br />
+              obtiene el primer elemento de la página que cumpla con el selector
+              que se le pasa a la función.
+            </p>
+            <pre>
+              <code style="color: white;">
+                let parrafo = document.querySelector("p");
+                console.log(parrafo);
+              </code>
+            </pre>
+          </section>
+          <section>
+            <p><strong>querySelectorAll</strong></p>
+            <p>
+              <strong>querySelectorAll(selector)</strong> <br />
+              obtiene todos los elementos de la página que cumplan con el
+              selector que se le pasa a la función.
+            </p>
+            <pre>
+              <code style="color: white;">
+                let parrafos = document.querySelectorAll("p");
+                console.log(parrafos);
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Creando a nodos</h2>
+            <img
+              src="./images/create_node.png"
+              alt="Estructura de una página web"
+              style="background-color: white"
+            />
+          </section>
+          <section>
+            <h2>Elimiando a nodos</h2>
+            <img
+              src="./images/delete_node.png"
+              alt="Estructura de una página web"
+              style="background-color: white"
+            />
+          </section>
+          <section>
+            <h2>Modificación de nodos</h2>
+            <p>
+              Una vez que hemos accedido a un nodo, podemos modificar sus
+              propiedades y atributos.
+            </p>
+            <ul>
+              <li>textContent</li>
+              <li>innerHTML</li>
+              <li>style</li>
+              <li>setAttribute</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Ejemplo:</h3>
+            <pre><code style="color: white;">
+      document.getElementById("titulo").textContent = <br>
+      "¡Hola, JavaScript!";
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h3>Ejemplo:</h3>
+            <pre><code style="color: white;">
+      document.getElementById("titulo").innerHTML = <br>
+      "<strong>¡Hola, JavaScript!</strong>";
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h3>Ejemplo:</h3>
+            <pre><code style="color: white;">
+      document.getElementById("titulo").style.color = "red";
+              </code>
+            </pre>
+          </section>
+        </section>
+
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+      Reveal.initialize();
+    </script>
+  </body>
+</html>
