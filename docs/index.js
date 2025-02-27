@@ -4,6 +4,10 @@ import { presentations } from './presentations.js';
 const grid = document.querySelector('.presentations-grid');
 
 presentations.forEach(presentation => {
+    if (!presentation.active) {
+        return
+    }
+
     const card = document.createElement('div');
     card.className = 'presentation-card';
     card.innerHTML = `
