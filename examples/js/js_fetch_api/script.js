@@ -62,7 +62,7 @@ function getComments(container) {
         }
         let idPost = input_id.value;
 
-        fetch('http://awita.site:3000/comments/'+idPost)
+        fetch('http://awita.site:3000/comments/' + idPost)
             .then(response => response.json())
             .then(data => {
                 let containerComments = document.getElementById('containerComments');
@@ -115,7 +115,7 @@ function postComment(container) {
 
         fetch('http://awita.site:3000/comment', {
             method: 'POST',
-            body: JSON.stringify({post_id: idPost, username: username, comentario: comentario}),
+            body: JSON.stringify({ post_id: idPost, username: username, comentario: comentario }),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -135,8 +135,54 @@ function postComment(container) {
     container.appendChild(start_button);
 }
 
+function validarURL(str) {
+    const patron = new RegExp("^(?:http(s)?:\\/\\/)?[\\w.-]+(?:\\.[\\w\\.-]+)+[\\w\\-\\._~:/?#[\\]@!\\$&'\\(\\)\\*\\+,;=.]+$");
+    return patron.test(str);
+}
+
+function validarImagen(url) {
+    return (
+      url
+        .trim()
+        .toLowerCase()
+        .match(/\.(jpeg|jpg|gif|png)$/) != null
+    );
+  }
+
+let validar =validarURL('http://awita.site:3000/posts');
+if (validar){
+    let test = validarImagen('https://i.pcmag.com/imagery/roundups/06msR0ZNV3Oc2GfpqCu9AcT-14..v1632927607.jpg');
+    console.log("test",test);
+    
+    if (test == true){
+        // creo el elemento img que apunte a la url
+    }else{
+        // creas un objeto de tipo p, iframe, a
+    }
+}
+
+console.log(validarURL('http hola'));
+
 container = start();
 getPosts(container);
 getComments(container);
 postComment(container);
 document.body.appendChild(container);
+
+let btnWin = document.createElement('button');
+btnWin.textContent = 'Open new window';
+btnWin.onclick = function () {
+    let win = window.open('./post.html', '_blank');
+    localStorage.setItem("id",2)
+    win.focus();
+}
+
+let btnWin2 = document.createElement('button');
+btnWin2.textContent = 'change window content';
+btnWin2.onclick = function () {
+    window.location.href = 'http://awita.site:3000/posts';
+}
+
+
+document.body.appendChild(btnWin);
+document.body.appendChild(btnWin2);
