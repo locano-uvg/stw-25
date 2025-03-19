@@ -1,0 +1,327 @@
+<html lang="es" class="reveal-full-page"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/dracula.min.css">
+</head>
+<body class="reveal-viewport" style="--slide-width: 960px; --slide-height: 700px; --slide-scale: 1.108;">
+    <div class="reveal slide center focused has-vertical-slides has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="fade" style="">
+        <div class="slides" style="width: 960px; height: 700px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(1.108);">
+            
+            <!-- Portada -->
+            <section style="top: 217.5px; display: none;" class="past" hidden="" aria-hidden="true">
+                <h2>API</h2>
+            </section>
+
+            <!-- ¿Qué es una API? -->
+            <section style="top: 0px; display: none;" class="stack past" data-previous-indexv="1" hidden="" aria-hidden="true">
+                <section style="top: 299px; display: none;" class="past" hidden="" aria-hidden="true">
+                    <h2>¿Qué es una API?</h2>
+                </section>
+                <section class="" style="top: 278px; display: none;" aria-hidden="true">
+                    <p>Conjunto de reglas y protocolos que permite que diferentes aplicaciones se comuniquen entre sí.</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 278px; display: none;" hidden="">
+                    <p>Define cómo los componentes de software deben interactuar.</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 173px; display: none;" hidden="">
+                    <h3>Analogía del Restaurante</h3>
+                    <ul>
+                        <li>Tú = Usuario/Aplicación cliente</li>
+                        <li>Menú = Documentación de la API</li>
+                        <li>Camarero = API</li>
+                        <li>Cocina = Backend/Servidor</li>
+                        <li>Comida = Respuesta/Datos</li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- Importancia de las APIs -->
+            <section style="top: 0px; display: none;" class="stack past" data-previous-indexv="1" hidden="" aria-hidden="true">
+                <section style="top: 299px; display: none;" class="past" hidden="" aria-hidden="true">
+                    <h2>Importancia de las APIs</h2>
+                </section>
+                <section class="" style="top: 278px; display: none;" aria-hidden="true">
+                    <p>Las APIs son pilares fundamentales del ecosistema tecnológico moderno.</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 203.5px; display: none;" hidden="">
+                    <h3>Integración de servicios heterogéneos</h3>
+                    <p>Permiten que sistemas completamente diferentes trabajen juntos de manera armoniosa.</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 177.5px; display: none;" hidden="">
+                    <h3>Colaboración entre empresas y desarrolladores</h3>
+                    <p>Las empresas exponen funcionalidades a través de APIs, permitiendo que desarrolladores externos creen valor adicional.</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <h3>Impulso a la innovación</h3>
+                    <p>Los desarrolladores pueden centrarse en crear nuevas funcionalidades basándose en servicios existentes.</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <h3>Ejemplos cotidianos</h3>
+                    <ul>
+                        <li>Inicio de sesión con Google o Facebook</li>
+                        <li>Pagos online con PayPal o tarjetas de crédito</li>
+                        <li>Aplicaciones que muestran pronóstico del tiempo</li>
+                        <li>Mapas interactivos en aplicaciones</li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- Tipos de APIs -->
+            <section style="top: 0px; display: none;" class="stack past" data-previous-indexv="6" hidden="" aria-hidden="true">
+                <section style="top: 248.5px; display: none;" class="past" hidden="" aria-hidden="true">
+                    <h2>Tipos de APIs y Arquitecturas</h2>
+                </section>
+                <section class="past" style="top: 267px; display: none;" hidden="" aria-hidden="true">
+                    <h3>APIs REST</h3>
+                    <p>Representational State Transfer</p>
+                </section>
+                <section class="past" style="top: 278px; display: none;" hidden="" aria-hidden="true">
+                    <p>Estilo arquitectónico para sistemas distribuidos que se ha convertido en el estándar de facto.</p>
+                </section>
+                <section class="past" style="top: 199px; display: none;" hidden="" aria-hidden="true">
+                    <h3>Principios clave de REST</h3>
+                    <ul>
+                        <li>Arquitectura cliente-servidor</li>
+                        <li>Sin estado</li>
+                        <li>Cacheable</li>
+                        <li>Interfaz uniforme</li>
+                    </ul>
+                </section>
+                <section class="past" style="top: 170.5px; display: none;" hidden="" aria-hidden="true">
+                    <h3>Verbos HTTP en REST</h3>
+                    <ul>
+                        <li><code>GET</code>: Obtener datos</li>
+                        <li><code>POST</code>: Crear un nuevo recurso</li>
+                        <li><code>PUT</code>: Actualizar completamente un recurso</li>
+                        <li><code>PATCH</code>: Actualizar parcialmente un recurso</li>
+                        <li><code>DELETE</code>: Eliminar un recurso</li>
+                    </ul>
+                </section>
+                <section class="past" style="top: 199px; display: none;" hidden="" aria-hidden="true">
+                    <h3>Ventajas de REST</h3>
+                    <ul>
+                        <li>Escalable y simple de entender</li>
+                        <li>Independiente de la plataforma y el lenguaje</li>
+                        <li>Fácil de testear y depurar</li>
+                        <li>Basado en estándares web ampliamente adoptados</li>
+                    </ul>
+                </section>
+                <section class="" style="top: 267px; display: none;" aria-hidden="true">
+                    <h3>APIs SOAP</h3>
+                    <p>Simple Object Access Protocol</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 278px; display: none;" hidden="">
+                    <p>Protocolo más estructurado y formal para el intercambio de información.</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 246px; display: none;" hidden="">
+                    <ul>
+                        <li>Utiliza exclusivamente XML</li>
+                        <li>Proporciona seguridad integrada</li>
+                        <li>Más rígido y verboso que REST</li>
+                        <li>Incluye un contrato formal (WSDL)</li>
+                    </ul>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <p>SOAP sigue siendo relevante en entornos empresariales con alta seguridad.</p>
+                </section>
+            </section>
+
+            <!-- Backend -->
+            <section style="top: 0px; display: none;" class="stack past" data-previous-indexv="0" hidden="" aria-hidden="true">
+                <section style="top: 299px; display: none;" class="" aria-hidden="true">
+                    <h2>Backend</h2>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 304px; display: none;" hidden="">
+                    <p>La parte de una aplicación que opera "tras bambalinas".</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 278px; display: none;" hidden="">
+                    <p>Invisible para el usuario final pero fundamental para el funcionamiento del sistema.</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <h3>Componentes típicos del backend</h3>
+                    <ul>
+                        <li>Servidores</li>
+                        <li>Bases de datos</li>
+                        <li>Lógica de negocio</li>
+                        <li>APIs</li>
+                    </ul>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <h3>Relación entre backend y APIs</h3>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <p>Backend = Cocina del restaurante</p>
+                    <p>APIs = Camareros que llevan pedidos y traen platos</p>
+                    <p>Una API bien diseñada actúa como una capa de abstracción que oculta la complejidad del backend.</p>
+                </section>
+            </section>
+
+            <!-- Códigos de Respuesta HTTP -->
+            <section style="top: 0px; display: block;" class="stack past" data-previous-indexv="6" hidden="" aria-hidden="true">
+                <section style="top: 299px; display: none;" class="past" hidden="" aria-hidden="true">
+                    <h2>Códigos de Respuesta HTTP</h2>
+                </section>
+                <section class="past" style="top: 278px; display: none;" hidden="" aria-hidden="true">
+                    <p>Números de tres dígitos que indican el resultado de una solicitud HTTP.</p>
+                </section>
+                <section class="past" style="top: 170.5px; display: none;" hidden="" aria-hidden="true">
+                    <h3>Estructura por familias</h3>
+                    <ul>
+                        <li><code>1xx</code>: Informativo</li>
+                        <li><code>2xx</code>: Éxito</li>
+                        <li><code>3xx</code>: Redirección</li>
+                        <li><code>4xx</code>: Error del cliente</li>
+                        <li><code>5xx</code>: Error del servidor</li>
+                    </ul>
+                </section>
+                <section class="past" style="top: 312.5px; display: none;" hidden="" aria-hidden="true">
+                    <h3>Códigos principales</h3>
+                </section>
+                <section class="past" style="top: 265px; display: none;" hidden="" aria-hidden="true">
+                    <h3><code>200 OK</code></h3>
+                    <p>La solicitud ha tenido éxito.</p>
+                </section>
+                <section class="past" style="top: 203px; display: none;" hidden="" aria-hidden="true">
+                    <h3><code>400 Bad Request</code></h3>
+                    <p>El servidor no pudo entender la solicitud debido a una sintaxis inválida.</p>
+                    <p>Tu Error</p>
+                </section>
+                <section class="" style="top: 265px; display: block;" aria-hidden="true">
+                    <h3><code>401 Unauthorized</code></h3>
+                    <p>La solicitud requiere autenticación del usuario.</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 239px; display: none;" hidden="">
+                    <h3><code>403 Forbidden</code></h3>
+                    <p>El servidor entiende la solicitud pero se niega a autorizarla.</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 265px; display: none;" hidden="">
+                    <h3><code>404 Not Found</code></h3>
+                    <p>El servidor no pudo encontrar el recurso solicitado.</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <h3><code>500 Internal Server Error</code></h3>
+                    <p>Error inesperado en el servidor.</p>
+                    <p>Error del server</p>
+                </section>
+            </section>
+
+            <!-- Mejores Prácticas -->
+            <section style="top: 0px; display: block;" class="stack past" data-previous-indexv="4" hidden="" aria-hidden="true">
+                <section style="top: 299px; display: none;" class="past" hidden="" aria-hidden="true">
+                    <h2>Mejores Prácticas</h2>
+                </section>
+                <section class="past" style="top: 312.5px; display: none;" hidden="" aria-hidden="true">
+                    <h3>Documentación clara y completa</h3>
+                </section>
+                <section class="past" style="top: 278px; display: none;" hidden="" aria-hidden="true">
+                    <p>Una API sin documentación es como un dispositivo sin manual de instrucciones.</p>
+                </section>
+                <section class="past" style="top: 278px; display: block;" hidden="" aria-hidden="true">
+                    <p>Herramientas: Swagger/OpenAPI, Postman, ReadTheDocs</p>
+                </section>
+                <section class="" style="top: 312.5px; display: block;" aria-hidden="true">
+                    <h3>Versionado de APIs</h3>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 304px; display: block;" hidden="">
+                    <p>Los cambios en las APIs son inevitables.</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 303.5px; display: none;" hidden="">
+                    <p>Un buen sistema de versionado: <code>/api/v1/recurso</code></p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <h3>Autenticación y autorización seguras</h3>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <p>Implementar OAuth 2.0, tokens JWT u otros mecanismos seguros.</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <p>Nunca transmitir credenciales en texto plano ni en URLs.</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <h3>Manejo adecuado de errores</h3>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <p>Devolver códigos de estado HTTP apropiados junto con mensajes de error descriptivos.</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <h3>Rate Limiting</h3>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <p>Proteger los recursos del servidor limitando el número de solicitudes.</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <h3>Diseño orientado a recursos</h3>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <p>Estructurar las APIs en torno a recursos (sustantivos) y no a acciones (verbos).</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <h3>Ejemplo</h3>
+                    <p>✅ <code>/usuarios</code></p>
+                    <p>❌ <code>/obtenerUsuarios</code></p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <h3>Consistencia</h3>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;" hidden="">
+                    <p>Mantener convenciones coherentes en toda la API.</p>
+                </section>
+            </section>
+
+            <!-- Herramientas -->
+            <section style="top: 0px; display: block;" class="stack present" data-previous-indexv="2">
+                <section style="top: 299px; display: none;" class="past" hidden="" aria-hidden="true">
+                    <h2>Herramientas</h2>
+                </section>
+                <section class="past" style="top: 241px; display: block;" hidden="" aria-hidden="true">
+                    <h3>Postman</h3>
+                    <p>Postman es una herramienta que permite probar APIs de forma visual y sin necesidad de escribir código.</p>
+                </section>
+                <section class="past" style="top: 241px; display: block;" hidden="" aria-hidden="true">
+                    <h3>Hoppscotch</h3>
+                    <p>Hoppscotch es una alternativa ligera y de código abierto a Postman.</p>
+                </section>
+                <section>
+                    <h3>HTTPie</h3>
+                    <p>HTTPie es una herramienta de línea de comandos para realizar solicitudes HTTP.</p>
+                </section>
+                <section class="present" style="top: 122px; display: block;">
+                    <h3>Comparación Postman vs Hoppscotch</h3>
+                    <table border="1" style="background-color: white;">
+                        <tbody><tr>
+                            <th>Herramienta</th>
+                            <th>Características</th>
+                        </tr>
+                        <tr>
+                            <td><strong><a href="https://www.postman.com/">Postman</a></strong></td>
+                            <td>Aplicación de escritorio y web, ideal para pruebas avanzadas y automatización.</td>
+                        </tr>
+                        <tr>
+                            <td><strong><a href="https://hoppscotch.io/">Hppscotch</a></strong></td>
+                            <td>Basado en navegador, rápido y ligero, excelente para pruebas rápidas.</td>
+                        </tr>
+                        <tr>
+                            <td><strong><a href="https://httpie.io/">HTTPie App</a></strong></td>
+                            <td>
+                                <p>HTTPie es una herramienta de línea de comandos para realizar solicitudes HTTP.</p>
+                                <p>HTTPie App es la versión gráfica de HTTPie.</p>
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </section>
+            </section>
+        </div>
+    <div class="backgrounds"><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background stack past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background present" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="slide-background stack past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div><div class="slide-background past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background present" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-background stack past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background present" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-background stack past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-background stack past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-background stack past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-background stack present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div></div></div><div class="slide-number" style="display: none;"></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-right" aria-label="next slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-up enabled" aria-label="above slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(1);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Comparación Postman vs Hoppscotch Herramienta Características Postman Aplicación de escritorio y web, ideal para pruebas avanzadas y automatización. Hoppscotch Basado en navegador, rápido y ligero, excelente para pruebas rápidas. </div></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+        Reveal.initialize();
+    </script>
+
+<div id="quick-start-container"></div></body></html>

@@ -65,6 +65,13 @@ export const presentations = [
         path: "temas/ia_code/index.html",
         image: "temas/ia_code/images/ia_code.jpeg",
         active: true
+    },
+    {
+        title: "Apis",
+        description: "Consumo de servicios web",
+        path: "temas/apis/index.html",
+        image: "temas/apis/images/api.png",
+        active: true
     }
 
 ];
