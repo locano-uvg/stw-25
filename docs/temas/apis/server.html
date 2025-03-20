@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backend Server Side</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/dracula.min.css"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Backend Server Side</h1>
+        </section>
+        <section>
+          <section>
+            <h2>Agenda</h2>
+          </section>
+          <section>
+            <ul>
+              <li>Server Side</li>
+              <li>Node.js</li>
+              <li>NPM</li>
+              <li>API vs API REST</li>
+              <li>Express.js</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Server Side</h2>
+          </section>
+          <section>
+            <img
+              style="background-color: white"
+              src="./images/server1.jpg"
+              alt="SERVER"
+            />
+          </section>
+          <section>
+            <p>
+              El término "Server Side" se refiere a la ejecución de código en el
+              servidor en lugar del cliente.
+            </p>
+          </section>
+          <section>
+            <h2>Frontend vs Backend</h2>
+            <p>
+              <strong>Frontend:</strong> Interfaz de usuario y experiencia de
+              usuario.
+            </p>
+            <p>
+              <strong>Backend:</strong> Lógica de negocio, almacenamiento y
+              procesamiento de datos.
+            </p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Server Side con Javascript</h2>
+          </section>
+          <section>
+            <ul>
+              <li>
+                Se refiere a la ejecución de código JavaScript en el servidor en
+                lugar de en el navegador del usuario.
+              </li>
+              <li>
+                JavaScript, originalmente diseñado para ejecutarse en
+                navegadores web del lado del cliente, ha ganado popularidad en
+                el lado del servidor gracias a entornos como Node.js.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <ul>
+              <li>
+                Nos referimos a la capacidad de ejecutar código JavaScript en el
+                servidor, lo que permite realizar tareas como procesamiento de
+                datos, acceso a bases de datos, manipulación de archivos y otras
+                operaciones del lado del servidor.
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Node.js</h2>
+          </section>
+          <section>
+            <ul>
+              <li>
+                Entorno de ejecución de JavaScript basado en V8 de Google
+                Chrome.
+              </li>
+              <li>Modelo de eventos y bucle de eventos.</li>
+              <li>
+                Permite operaciones asincrónicas sin bloquear solicitudes.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <img
+              style="background-color: white"
+              src="./images/server2.png"
+              alt="SERVER"
+            />
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Instalación de Node.js</h2>
+          </section>
+          <section>
+            <img
+              style="background-color: white"
+              src="./images/node.png"
+              alt="SERVER"
+              height="300"
+            />
+            <p>Descargar desde: <a href="https://nodejs.org/">nodejs.org</a></p>
+            <pre><code>node -v
+  npm -v</code></pre>
+          </section>
+          <section>
+            <h2>Módulos y Require</h2>
+            <ul>
+              <li>
+                los módulos son unidades independientes de código reutilizable.
+              </li>
+              <li>
+                Puedes crear tus propios módulos y también utilizar los módulos
+                integrados o instalados a través de npm
+              </li>
+            </ul>
+          </section>
+          <section>
+            <img
+              style="background-color: white"
+              src="./images/server3.png"
+              alt="SERVER"
+            />
+          </section>
+          <section>
+            <img
+              style="background-color: white"
+              src="./images/server4.png"
+              alt="SERVER"
+              height="500"
+            />
+            <p>Se pueden importar con <code>require</code>.</p>
+            <pre><code>const miModulo = require('./miModulo');</code></pre>
+          </section>
+
+          <section>
+            <h2>import vs require</h2>
+            <ul>
+              <li>Node.js utiliza require para importar módulos.</li>
+              <li>
+                La sintaxis import es parte del estándar ECMAScript (ES6 y
+                versiones posteriores) y no es nativamente compatible con
+                Node.js.
+              </li>
+              <li>
+                Sin embargo, a partir de Node.js versión 13, se ha habilitado la
+                opción experimental para usar la sintaxis import mediante la
+                extensión de archivo .mjs o configuraciones específicas.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <img
+              style="background-color: white"
+              src="./images/server5.png"
+              alt="SERVER"
+            />
+          </section>
+        </section>
+
+        <section>
+          <section><h2>NPM</h2></section>
+          <section>
+            <ul>
+              <li>Gestor de paquetes para Node.js.</li>
+              <li>Permite instalar librerías con un solo comando.</li>
+              <li><code>npm init -y</code>: crea un package.json.</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section><h2>API y REST</h2></section>
+          <section>
+            <h3>API</h3>
+            <ul>
+              <li>Interfaz de programación de aplicaciones.</li>
+              <li>Permite la comunicación entre aplicaciones.</li>
+              <li>Se basa en solicitudes HTTP.</li>
+            </ul>
+          </section>
+          <section>
+            <img
+              src="./images/server6.svg"
+              alt="SERVER"
+              style="background-color: white"
+            />
+          </section>
+          <section>
+            <h3>API REST</h3>
+            <ul>
+              <li>Arquitectura de transferencia de estado representacional.</li>
+              <li>Se basa en el protocolo HTTP.</li>
+              <li>Utiliza los métodos GET, POST, PUT y DELETE.</li>
+            </ul>
+          </section>
+          <section>
+            <img
+              style="background-color: white"
+              src="./images/server7.png"
+              alt="SERVER"
+            />
+          </section>
+          <section>
+            <img
+              style="background-color: white"
+              src="./images/server8.png"
+              alt="SERVER"
+            />
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Express.js</h2>
+          </section>
+          <section>
+            <p>
+              Express.js es un framework web para Node.js que simplifica el
+              desarrollo de aplicaciones web y APIs.
+            </p>
+            <p>
+              Proporciona un conjunto robusto de características para construir
+              aplicaciones web y móviles, incluyendo manejo de rutas,
+              middleware, y gestión de solicitudes y respuestas HTTP
+            </p>
+          </section>
+          <section>
+            <h3>Instalación de Express.js</h3>
+            <pre><code>npm install express</code></pre>
+
+            <ul>
+              <li>Crear un archivo app.js</li>
+              <li>Importar express</li>
+              <li>Crear una instancia de express</li>
+              <li>Definir rutas</li>
+              <li>Escuchar en un puerto</li>
+            </ul>
+          </section>
+          <section>
+            <img
+              style="background-color: white"
+              src="./images/server10.png"
+              alt="SERVER"
+            />
+          </section>
+          <section>
+            <h3>Rutas</h3>
+            <ul>
+              <li>Express permite manejar rutas de manera sencilla.</li>
+              <li>
+                Puedes definir rutas para diferentes métodos HTTP (GET, POST,
+                PUT, DELETE) y gestionar parámetros de URL.
+              </li>
+              <li>
+                Las rutas son utilizadas para definir cómo la aplicación
+                responde a solicitudes HTTP específicas.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <img
+              style="background-color: white"
+              src="./images/server11.png"
+              alt="SERVER"
+            />
+          </section>
+          <section>
+            <h3>Definiendo rutas</h3>
+            <ul>
+              <li>
+                <code>app.get('/', (req, res) => {...})</code>: define una ruta
+                para las solicitudes HTTP GET en la ruta raíz ("/").
+              </li>
+              <li>
+                La función de devolución de llamada (callback) (req, res) =>
+                {...} se ejecutará cuando se reciba una solicitud en esa ruta.
+              </li>
+              <li>
+                req es el objeto de solicitud res es el objeto de respuesta.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <img
+              style="background-color: white"
+              src="./images/server12.png"
+              alt="SERVER"
+            />
+          </section>
+          <section>
+            <h3>Parámetros</h3>
+            <ul>
+              <li>
+                Puedes definir rutas con parámetros que se pueden acceder a
+                través de req.params.
+              </li>
+              <li>
+                Los parámetros se definen con dos puntos seguidos del nombre del
+                parámetro.
+              </li>
+              <li>
+                Por ejemplo, para una ruta /users/:id, puedes acceder al
+                parámetro id a través de req.params.id.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <img
+              style="background-color: white"
+              src="./images/server13.png"
+              alt="SERVER"
+            />
+          </section>
+          <section>
+            <h3>Metodos HTTP</h3>
+            <ul>
+              <li>
+                Express permite definir rutas para diferentes métodos HTTP.
+              </li>
+              <li>Los métodos HTTP más comunes son GET, POST, PUT y DELETE.</li>
+              <li>app.get(), app.post(), app.put(), app.delete()</li>
+            </ul>
+          </section>
+          <section>
+            <img
+              style="background-color: white"
+              src="./images/server14.png"
+              alt="SERVER"
+            />
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Ejemplo de API en Python (Flask)</h2>
+          </section>
+          <section>
+            <pre><code>from flask import Flask
+
+            app = Flask(__name__)
+            
+            @app.route('/')
+            def home():
+            return "¡Hola, mundo desde Flask!"
+            
+            if __name__ == '__main__':
+            app.run(debug=True, port=5000)</code></pre>
+          </section>
+          <section>
+            <h2>Ejemplo de API en Go (Gin)</h2>
+            <pre><code>package main
+            
+            import (
+            "github.com/gin-gonic/gin"
+            )
+            
+            func main() {
+            r := gin.Default()
+            r.GET("/", func(c *gin.Context) {
+                c.JSON(200, gin.H{"message": "¡Hola, mundo desde Go!"})
+            })
+            r.Run(":8080")
+            }</code></pre>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+    <script>
+      Reveal.initialize();
+    </script>
+  </body>
+</html>
