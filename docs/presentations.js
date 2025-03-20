@@ -72,6 +72,13 @@ export const presentations = [
         path: "temas/apis/index.html",
         image: "temas/apis/images/api.png",
         active: true
+    },
+    {
+        title: "Server",
+        description: "Server side",
+        path: "temas/apis/server.html",
+        image: "temas/apis/images/server1.jpg",
+        active: true
     }
 
 ];
