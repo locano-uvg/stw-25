@@ -50,9 +50,18 @@ func postNewPost(c *gin.Context) {
 
 func main() {
 	router := gin.Default()
+	router.GET("/", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "Bienvenido a la API de posts",
+			"endpoints": []string{
+				"GET /posts",
+				"GET /posts/:id",
+				"POST /posts",
+		}})
+	})
 	router.GET("/posts", getPosts)
 	router.GET("/posts/:id", getPostById)
 	router.POST("/posts", postNewPost)
 
-	router.Run("localhost:3003")
+	router.Run(":4400")
 }

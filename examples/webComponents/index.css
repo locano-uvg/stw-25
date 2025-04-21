@@ -1,0 +1,7 @@
+#body-container{
+    width: 100%;
+    height: calc(100vh - 0px);
+    background-color: black;
+    color: white;
+    padding: 16px;
+}

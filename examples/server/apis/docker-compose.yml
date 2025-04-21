@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  express-api:
+    build: 
+      context: ./express-api
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    networks:
+      - api-network
+
+  go-api:
+    build:
+      context: ./go-api
+      dockerfile: Dockerfile
+    ports:
+      - "4400:4400"
+    networks:
+      - api-network
+
+  python-api:
+    build:
+      context: ./python-api
+      dockerfile: Dockerfile
+    ports:
+      - "4300:4300"
+    networks:
+      - api-network
+
+  frontend:
+    image: nginx:alpine
+    ports:
+      - "4100:80"
+    volumes:
+      - ./frontend/index.html:/usr/share/nginx/html/index.html
+    networks:
+      - api-network
+
+networks:
+  api-network:
+    driver: bridge 
