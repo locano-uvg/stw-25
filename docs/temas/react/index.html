@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>React - Introducción</title>
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css"
+         />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/moon.min.css"
+         />
+   </head>
+   <body>
+      <div class="reveal">
+         <div class="slides">
+            <!-- Introducción -->
+            <section>
+               <h1>React</h1>
+            </section>
+            <section>
+               <h3>
+                  Una biblioteca JavaScript para construir interfaces de usuario
+               </h3>
+               <p>
+                  <small>Creado por Facebook en 2013</small>
+               </p>
+            </section>
+            <!-- ¿Qué es React? -->
+            <section>
+               <section>
+                  <h2>¿Qué es React?</h2>
+               </section>
+               <section>
+                  <ul>
+                     <li>Biblioteca JavaScript para construir interfaces de usuario</li>
+                     <li>Basado en componentes reutilizables</li>
+                     <li>Utiliza un DOM virtual para mejor rendimiento</li>
+                     <li>Mantiene un flujo de datos unidireccional</li>
+                  </ul>
+               </section>
+            </section>
+            <!-- Ventajas de React -->
+            <section>
+               <section>
+                  <h2>Ventajas de React</h2>
+               </section>
+               <section>
+                  <ul>
+                     <li>Componentes reutilizables</li>
+                     <li>Rendimiento optimizado con DOM virtual</li>
+                     <li>Gran ecosistema y comunidad</li>
+                     <li>Fácil de aprender y usar</li>
+                     <li>Excelente para aplicaciones de una sola página (SPA)</li>
+                  </ul>
+               </section>
+               <section>
+                  <img src="./images/virtualdom.png" alt="react-logo" height="500px" />
+               </section>
+            </section>
+            <!-- Estado y Props -->
+            <section>
+               <h2>Estado y Props</h2>
+               <ul>
+                  <li>Se accede a través de this.props</li>
+                  <li><strong>Props:</strong> Datos que se pasan a un componente</li>
+                  <li><strong>Estado:</strong> Datos internos del componente</li>
+               </ul>
+            </section>
+            <!-- Componentes -->
+            <section>
+               <section>
+                  <h2>Componentes</h2>
+                  <ul>
+                     <li>Podemos generar componentes que manejen su propio estado, y conviértelos en interfaces de usuario complejas.
+                     </li>
+                  </ul>
+               </section>
+               <section>
+                  <img src="./images/componente1.png" alt="react-logo" height="500px" />
+               </section>
+               <section>
+                  <img src="./images/componente2.png" alt="react-logo" height="500px" />
+               </section>
+            </section>
+            <!-- JSX -->
+            <section>
+               <section>
+                  <h2>JSX</h2>
+               </section>
+               <section>
+                  <ul>
+                     <li>Sintaxis que combina JavaScript y XML</li>
+                     <li>Permite escribir código similar a HTML dentro de JavaScript</li>
+                     <li>Se compila a JavaScript normal</li>
+                     <li>Ejemplo:</li>
+                  </ul>
+               </section>
+               <section>
+                  <pre><code class="jsx">const elemento = (
+                    <div className="contenedor">
+                        < h1>Hola {nombre}</ h1>
+                        < p>Bienvenido a React</ p>
+                    </div>
+                );</code></pre>
+               </section>
+            </section>
+            <!-- Ciclo de vida -->
+            <section>
+               <h2>Ciclo de vida de componentes</h2>
+               <ul>
+                  <li>Montaje (componentDidMount)</li>
+                  <li>Actualización (componentDidUpdate)</li>
+                  <li>Desmontaje (componentWillUnmount)</li>
+               </ul>
+            </section>
+            <!-- Requisitos para comenzar -->
+            <section>
+               <h2>Requisitos para comenzar</h2>
+               <ul>
+                  <li>Node.js y npm instalados</li>
+                  <li>Editor de código (VS Code recomendado)</li>
+                  <li>
+                     Conocimientos básicos de:
+                     <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript moderno (ES6+)</li>
+                     </ul>
+                  </li>
+               </ul>
+            </section>
+            <!-- Crear un proyecto React -->
+            <section>
+               <h2>Crear un proyecto React</h2>
+               <pre><code class="bash">
+# Usando Vite (más rápido y moderno)
+npm create vite@latest mi-aplicacion -- --template react
+          </code></pre>
+            </section>
+            <!-- Herramientas útiles -->
+            <section>
+               <h2>Herramientas útiles</h2>
+               <ul>
+                  <li>React Developer Tools (extensión del navegador)</li>
+                  <li>Create React App o Vite</li>
+                  <li>React Router (para navegación)</li>
+                  <li>Redux o Context API (para gestión de estado)</li>
+                  <li>Material-UI o Tailwind CSS (para estilos)</li>
+               </ul>
+            </section>
+            <!-- Recursos adicionales -->
+            <section>
+               <h2>Recursos adicionales</h2>
+               <ul>
+                  <li>
+                     <a href="https://reactjs.org/docs/getting-started.html"
+                        >Documentación oficial</a
+                        >
+                  </li>
+                  <li>
+                     <a href="https://reactjs.org/tutorial/tutorial.html"
+                        >Tutorial oficial</a
+                        >
+                  </li>
+                  <li>
+                     <a href="https://github.com/facebook/react">GitHub de React</a>
+                  </li>
+                  <li>
+                     <a href="https://reactjs.org/community/support.html"
+                        >Comunidad y soporte</a
+                        >
+                  </li>
+               </ul>
+            </section>
+         </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+      <script>
+         Reveal.initialize();
+      </script>
+   </body>
+</html>

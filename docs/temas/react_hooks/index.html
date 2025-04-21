@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Hooks</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css"
+    />
+ <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/moon.min.css"
+    />
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Introducción -->
+            <section>
+                <h1>React Hooks</h1>
+                
+            </section>
+            <section>
+                <h3>Una nueva forma de manejar el estado y efectos en React</h3>
+                <p>
+                    <small>Introducidos en React 16.8 (Febrero 2019)</small>
+                </p>
+            </section>
+
+            <!-- ¿Qué son los Hooks? -->
+            <section>
+                <h2>¿Qué son los Hooks?</h2>
+                <ul>
+                    <li>Funciones que permiten "enganchar" estado y características del ciclo de vida en componentes funcionales</li>
+                    <li>Permiten usar estado y otras características de React sin escribir una clase</li>
+                    <li>Comienzan siempre con la palabra "use"</li>
+                    <li>Deben ser llamados en el nivel superior del componente</li>
+                </ul>
+            </section>
+
+            <!-- useState -->
+            <section>
+                <section>
+                    <h2>useState</h2>
+                    <p>Hook para manejar el estado local en componentes funcionales</p>
+                </section>
+                <section>
+                    <img src="./images/useState.png" alt="react-logo" height="500px" />
+                </section>
+            </section>
+
+            <!-- useEffect -->
+            <section>
+                <section>
+                    <h2>useEffect</h2>
+                    <p>Hook para manejar efectos secundarios (side effects)</p>
+                </section>
+                <section>
+                    <img src="./images/useEffect.png" alt="react-logo" height="500px" />
+                </section>
+            </section>
+
+            <!-- useContext -->
+            <section>
+                <section>
+                    <h2>useContext</h2>
+                    <p>Hook para acceder al contexto de React</p>
+                </section>
+                <section>
+                    <pre><code class="jsx">import { createContext, useContext } from 'react';
+
+const TemaContext = createContext('claro');
+
+function App() {
+    return (
+        <TemaContext.Provider value="oscuro">
+            <ComponenteHijo />
+        </TemaContext.Provider>
+    );
+}
+
+function ComponenteHijo() {
+    const tema = useContext(TemaContext);
+    return <div>Tema actual: {tema}</div>;
+}</code></pre>
+                </section>
+            </section>
+
+            <!-- useRef -->
+            <section>
+                <section>
+                    <h2>useRef</h2>
+                    <p>Hook para mantener referencias mutables</p>
+                </section>
+                <section>
+                    <pre><code class="jsx">import { useRef, useEffect } from 'react';
+
+function EjemploRef() {
+    const inputRef = useRef(null);
+    
+    useEffect(() => {
+        // Enfoca el input al montar
+        inputRef.current.focus();
+    }, []);
+    
+    return (
+        <div>
+            <!-- <input ref={inputRef} type="text" />
+            <button onClick={`() => inputRef.current.focus()}>
+                Enfocar input
+            </button> -->
+        </div>
+    );
+}
+</code></pre>
+                </section>
+            </section>
+
+            <!-- useReducer -->
+            <section>
+                <section>
+                    <h2>useReducer</h2>
+                    <p>Hook para manejar estado complejo</p>
+                </section>
+                <section>
+                    <pre><code class="jsx">import { useReducer } from 'react';
+
+function reducer(state, action) {
+    switch (action.type) {
+        case 'incrementar':
+            return { contador: state.contador + 1 };
+        case 'decrementar':
+            return { contador: state.contador - 1 };
+        default:
+            return state;
+    }
+}
+
+function Contador() {
+    const [state, dispatch] = useReducer(reducer, { contador: 0 });
+    
+    return (
+        <div>
+            <p>Contador: {state.contador}</p>
+            <!-- <button onClick={`() => dispatch({ type: 'incrementar' })}>
+                +
+            </button>
+            <button onClick={`() => dispatch({ type: 'decrementar' })}>
+                -
+            </button> -->
+        </div>
+    );
+}</code></pre>
+                </section>
+            </section>
+
+            <!-- useMemo -->
+            <section>
+                <section>
+                    <h2>useMemo</h2>
+                    <p>Hook para memorizar valores computados</p>
+                </section>
+                <section>
+                    <pre><code class="jsx">import { useMemo, useState } from 'react';
+
+function ComponenteCostoso({ datos }) {
+    const [contador, setContador] = useState(0);
+    
+    const datosProcesados = useMemo(() => {
+        // Cálculo costoso
+        return datos.map(item => item * 2);
+    }, [datos]); // Solo recalcula si datos cambia
+    
+    return (
+        <div>
+            <p>Contador: {contador}</p>
+            <!-- <button onClick={`() => setContador(c => c + 1)`}>
+                Incrementar
+            </button> -->
+            <ul>
+                {datosProcesados.map(item => (
+                    <li key={item}>{item}</li>
+                ))}
+            </ul>
+        </div>
+    );
+}</code></pre>
+                </section>
+            </section>
+
+            <!-- useCallback -->
+            <section>
+                <section>
+                    <h2>useCallback</h2>
+                    <p>Hook para memorizar funciones</p>
+                </section>
+                <section>
+                    <pre><code class="jsx">import { useCallback, useState } from 'react';
+
+function Padre() {
+    const [contador, setContador] = useState(0);
+    
+    const incrementar = useCallback(() => {
+        setContador(c => c + 1);
+    }, []); // Función memorizada
+    
+    return (
+        <div>
+            <p>Contador: {contador}</p>
+            <Hijo incrementar={incrementar} />
+        </div>
+    );
+}</code></pre>
+                </section>
+            </section>
+
+            <!-- Custom Hooks -->
+            <section>
+                <section>
+                    <h2>Custom Hooks</h2>
+                    <p>Hooks personalizados para reutilizar lógica</p>
+                </section>
+                <section>
+                    <pre><code class="jsx">// useWindowSize.js
+import { useState, useEffect } from 'react';
+
+function useWindowSize() {
+    const [size, setSize] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight
+    });
+    
+    useEffect(() => {
+        const handleResize = () => {
+            setSize({
+                width: window.innerWidth,
+                height: window.innerHeight
+            });
+        };
+        
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+    
+    return size;
+}
+
+// Uso
+function Componente() {
+    const { width, height } = useWindowSize();
+    return <div>Ancho: {width}, Alto: {height}</div>;
+}</code></pre>
+                </section>
+            </section>
+
+            <!-- Reglas de los Hooks -->
+            <section>
+                <h2>Reglas de los Hooks</h2>
+                <ul>
+                    <li>Solo llamar Hooks en el nivel superior</li>
+                    <li>Solo llamar Hooks en componentes de React</li>
+                    <li>Los nombres de los Hooks deben comenzar con "use"</li>
+                    <li>Los Hooks personalizados deben seguir las mismas reglas</li>
+                </ul>
+            </section>
+
+            <!-- Recursos adicionales -->
+            <section>
+                <h2>Recursos adicionales</h2>
+                <ul>
+                    <li><a href="https://reactjs.org/docs/hooks-intro.html">Documentación oficial de Hooks</a></li>
+                    <li><a href="https://reactjs.org/docs/hooks-reference.html">Referencia de Hooks</a></li>
+                    <li><a href="https://reactjs.org/docs/hooks-rules.html">Reglas de los Hooks</a></li>
+                    <li><a href="https://reactjs.org/docs/hooks-custom.html">Hooks personalizados</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+       Reveal.initialize();
+    </script>
+</body>
+</html>

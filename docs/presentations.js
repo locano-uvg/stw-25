@@ -3,19 +3,22 @@ export const presentations = [
         title: "Internet antes de la web",
         description: "Telnet, Ips, Ports y más",
         path: "temas/internet/index.html",
-        image: "temas/internet/images/internet.png"
+        image: "temas/internet/images/internet.png",
+        active: true
     },
     {
         title: "Comandos básicos de Linux",
         description: "Comandos para trabajar en la terminal",
         path: "temas/cli/index.html",
-        image: "temas/cli/images/cli.png"
+        image: "temas/cli/images/cli.png",
+        active: true
     },
     {
         title: "Introducción a GIT",
         description: "Control de versiones",
         path: "temas/github/index.html",
-        image: "temas/github/images/git.jpg"
+        image: "temas/github/images/git.jpg",
+        active: true
     },
     {
         title: "Web Servers",
@@ -79,6 +82,19 @@ export const presentations = [
         path: "temas/apis/server.html",
         image: "temas/apis/images/server1.jpg",
         active: true
+    },
+    {
+        title: "React",
+        description: "Framework de JavaScript",
+        path: "temas/react/index.html",
+        image: "temas/react/images/react.png",
+        active: true
+    },
+    {
+        title: "React Hooks",
+        description: "Hooks de React",
+        path: "temas/react_hooks/index.html",
+        image: "temas/react_hooks/images/hooks.png",
+        active: true
     }
-
 ];

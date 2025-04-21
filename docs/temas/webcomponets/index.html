@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Components</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/moon.min.css"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Título -->
+        <section>
+          <h1>Web Components</h1>
+        </section>
+        <!-- Objetivo principal -->
+        <section>
+          <section>
+            <h2>Objetivo</h2>
+          </section>
+          <section>
+            <img src="./images/webcomponents.jpg" alt="Web Components" />
+            <p>
+              Explicar qué son los Web Components, sus características
+              principales y cómo implementarlos en aplicaciones web modernas.
+            </p>
+          </section>
+        </section>
+        <!-- Actualidad -->
+        <section>
+          <section><h2>Actualidad</h2></section>
+          <section>
+            <p>
+              Como desarrolladores buscamos la
+              <strong>reutilización de código</strong>.
+            </p>
+            <p>
+              Cabe mencionar que no es sencillo principalmente en HTML (con sus
+              estilos y scripts)
+            </p>
+          </section>
+          <section>
+            <p>
+              “Varias ocasiones se han tenido que escribir para renderizar
+              controles de interfaz (UI) personalizados, y ahora usarlos
+              múltiples veces puede crear un caos en la página si no se es
+              cuidadoso.”
+            </p>
+          </section>
+        </section>
+        <!-- Introducción -->
+        <section>
+          <section>
+            <h2>Que son los Web Components</h2>
+          </section>
+          <section>
+            <p>
+              Los Web Components son un conjunto de tecnologías web que permiten
+              crear elementos personalizados reutilizables con funcionalidad
+              encapsulada.
+            </p>
+          </section>
+        </section>
+        <!-- Beneficios -->
+        <section>
+          <section>
+            <h2>Beneficios</h2>
+          </section>
+          <section>
+            <ul>
+              <li>Reutilización de código</li>
+              <li>Encapsulación de estilos y comportamiento</li>
+              <li>Compatibilidad con frameworks modernos</li>
+              <li>Estándar web nativo</li>
+              <li>Mejor rendimiento</li>
+            </ul>
+          </section>
+        </section>
+        <!-- Características principales -->
+        <section>
+          <section>
+            <h2>Características principales</h2>
+          </section>
+          <section>
+            <ul>
+              <li>Custom Elements</li>
+              <li>Shadow DOM</li>
+              <li>HTML Templates</li>
+              <li>ES Modules</li>
+            </ul>
+          </section>
+        </section>
+        <!-- Custom Elements -->
+        <section>
+          <section>
+            <h2>Custom Elements</h2>
+          </section>
+          <section>
+            <p>
+              Permiten definir elementos HTML personalizados con su propio
+              comportamiento y propiedades.
+            </p>
+          </section>
+          <section>
+            <pre>
+                <code>
+  class MiElemento extends HTMLElement {
+    constructor() {
+      super();
+      // Inicialización
+    }
+    
+    connectedCallback() {
+      // Cuando el elemento se añade al DOM
+    }
+  }
+  
+  customElements.define('mi-elemento', MiElemento);
+                </code>
+              </pre>
+          </section>
+        </section>
+
+        <!-- Shadow DOM -->
+        <section>
+          <section>
+            <h2>Shadow DOM</h2>
+          </section>
+          <section>
+            <ul>
+              <li>
+                Conjunto de API’s de JavaScript para crear un árbol DOM
+                “sombra”.
+              </li>
+              <li>Crea un nuevo elemento encapsulado</li>
+              <li>
+                Puede tener un estilo y scripts sin miedo de colisiones con
+                otras partes del documento
+              </li>
+            </ul>
+          </section>
+          <section>
+            <pre>
+                <code>
+  class MiElemento extends HTMLElement {
+    constructor() {
+      super();
+      // Inicialización
+      const shadow = this.attachShadow({mode: 'open'});
+      shadow.innerHTML = `
+       < styles> < /styles>
+       < div> < /div>
+      `;
+    }
+
+  }
+  
+                </code>
+              </pre>
+          </section>
+        </section>
+        <!-- HTML Templates -->
+        <!-- <section>
+          <section>
+            <h2>HTML Templates</h2>
+          </section>
+          <section>
+            <ul>
+              <li>Plantillas de HTML</li>
+              <li>Implementación de template y slot</li>
+              <li>
+                Crea plantillas de marcado que no se despliegan en la página.
+              </li>
+              <li>
+                Permite la reutilización de la estructura
+              </li>
+          </section>
+          <section>
+            <pre>
+              <code>
+<template id="mi-template">
+  <div class="contenido">
+    <h3>Título</h3>
+    <p>Contenido del template</p>
+  </div>
+</template>
+
+// Uso en JavaScript
+const template = document.getElementById('mi-template');
+const contenido = template.content.cloneNode(true);
+              </code>
+            </pre>
+          </section>
+        </section> -->
+        <!-- ES Modules -->
+        <section>
+          <section>
+            <h2>ES Modules</h2>
+          </section>
+          <section>
+            <p>
+              Permiten importar y exportar componentes de forma modular,
+              facilitando su reutilización.
+            </p>
+            <pre>
+              <code>
+// mi-componente.js
+export class MiComponente extends HTMLElement {
+  // Implementación
+}
+
+// Uso en otro archivo
+import { MiComponente } from './mi-componente.js';
+customElements.define('mi-componente', MiComponente);
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <!-- Ejemplo práctico -->
+        <section>
+          <section>
+            <h2>Partes de un componente</h2>
+          </section>
+          <section>
+            <img src="./images/class.png" alt="Class element" height="500px" />
+            <p>Construir el componente en una clase</p>
+          </section>
+          <section>
+            <img
+              src="./images/customElement.png"
+              alt="customElement"
+              height="500px"
+            />
+            <p>Definir el identificador del componente</p>
+          </section>
+          <section>
+            <h2>Plantillas</h2>
+            <p>Estructura de la plantilla de un componente</p>
+            <ul>
+              <li>constructor()
+                <ul>
+                    <li>
+                        Su objetivo es crear el componente y añadirle el shadow DOM
+                    </li>
+                </ul>
+              </li>
+              <li>connectedCallback()
+                <ul>
+                    <li>
+                        Siempre se ejecuta cuando el componente se añade al DOM
+                    </li>
+                </ul>
+              </li>
+              <li>disconnectedCallback()
+                <ul>
+                    <li>
+                        Siempre se ejecuta cuando el componente se elimina del DOM
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+
+            <ul>
+                <li>attributeChangedCallback()
+                  <ul>
+                      <li>
+                          Se ejecuta cuando se modifica un atributo del componente
+                      </li>
+                  </ul>
+                </li>
+                <li>adoptedCallback()
+                  <ul>
+                      <li>
+                          Se ejecuta cuando el componente se añade a un nuevo documento
+                      </li>
+                  </ul>
+                </li>
+              </ul>
+          </section>
+          <section>
+            <img src="./images/plantilla.png" alt="lifecycle" height="500px" /> 
+          </section>
+          <section>
+            <pre>
+              <code>
+// Definición del componente
+class MiTarjeta extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({mode: 'open'});
+    shadow.innerHTML = `
+    < styles>  .tarjeta {
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          padding: 16px;
+          margin: 10px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+          color: #333;
+          margin-top: 0;
+        }< /styles>
+    < div class="tarjeta">
+    < h2>< slot name="titulo">Título por defecto</></>
+    < p>< slot>Contenido por defecto</></>
+    < /div>
+    `;
+  }
+}
+
+// Registro del componente
+customElements.define('mi-tarjeta', MiTarjeta);
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h3>Uso del componente</h3>
+            <pre>
+              <code>
+<mi-tarjeta>
+  <span slot="titulo">Mi Título Personalizado</span>
+  Este es el contenido de mi tarjeta personalizada.
+</mi-tarjeta>
+              </code>
+            </pre>
+          </section>
+        </section>
+        <!-- Compatibilidad con navegadores -->
+        <section>
+          <section>
+            <h2>Compatibilidad con navegadores</h2>
+          </section>
+          <section>
+            <p>
+              Los Web Components son compatibles con todos los navegadores
+              modernos. Para navegadores antiguos, se pueden utilizar polyfills.
+            </p>
+          </section>
+        </section>
+        <!-- Integración con frameworks -->
+        <section>
+          <section>
+            <h2>Integración con frameworks</h2>
+          </section>
+          <section>
+            <p>
+              Los Web Components pueden ser utilizados junto con frameworks como
+              React, Angular o Vue, o como alternativa a ellos.
+            </p>
+          </section>
+        </section>
+        <!-- Mejores prácticas -->
+        <section>
+          <section>
+            <h2>Mejores prácticas</h2>
+          </section>
+          <section>
+            <ul>
+              <li>Usar nombres con guión para evitar conflictos</li>
+              <li>Extender siempre de HTMLElement</li>
+              <li>Implementar el ciclo de vida completo</li>
+              <li>Utilizar atributos para configuración</li>
+              <li>Documentar la API del componente</li>
+            </ul>
+          </section>
+        </section>
+        <!-- Recursos adicionales -->
+        <section>
+          <section>
+            <h2>Recursos adicionales</h2>
+          </section>
+          <section>
+            <ul>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/es/docs/Web/Web_Components"
+                  target="_blank"
+                  >MDN Web Components</a
+                >
+              </li>
+              <li>
+                <a href="https://www.webcomponents.org/" target="_blank"
+                  >WebComponents.org</a
+                >
+              </li>
+              <li>
+                <a href="https://www.polymer-project.org/" target="_blank"
+                  >Polymer Project</a
+                >
+              </li>
+              <li><a href="https://lit.dev/" target="_blank">Lit</a></li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+      Reveal.initialize();
+    </script>
+  </body>
+</html>
