@@ -84,6 +84,13 @@ export const presentations = [
         active: true
     },
     {
+        title: "Web Components",
+        description: "Componentes web",
+        path: "temas/webcomponets/index.html",
+        image: "temas/webcomponets/images/web_components.png",
+        active: true
+    },
+    {
         title: "React",
         description: "Framework de JavaScript",
         path: "temas/react/index.html",
