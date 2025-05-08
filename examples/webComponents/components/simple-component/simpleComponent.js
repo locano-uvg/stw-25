@@ -1,47 +1,48 @@
-class SimpleComponent extends HTMLElement {
+class Componente1 extends HTMLElement {
     constructor() {
-        super();
-        
+        super();        
         const shadowDOM = this.attachShadow({ mode: "open" });
+        let div = document.createElement("div");
+        div.id = 'card';
 
-        // Add Css Reference
-        const link = document.createElement('link');
-        link.setAttribute("rel", "stylesheet");
-        link.setAttribute("href", "./components/simple-component/simpleComponent.css");
-        shadowDOM.appendChild(link);
+        let title = document.createElement("h1");
+        title.id = "title";
+        title.innerHTML = "Esto es un titulo es el default";
+        let description = document.createElement("p");
+        description.innerHTML = "Hola esta descripción viene de un componente";
 
-        // Add Card
-        const card = document.createElement('div');
-        card.setAttribute("class", "card");
+        div.appendChild(title);
+        div.appendChild(description);
+        div.className = "card";
+        shadowDOM.appendChild(div);
 
-        // Add Title
-        const title = document.createElement('h1');
-        title.setAttribute("id", "title");
-        title.innerHTML = "Titulo de la card";
-        card.appendChild(title);
-        
-        // Add Description
-        const description = document.createElement('p');
-        description.setAttribute("id", "description");
-        description.innerHTML = "Description de la card";
-        card.appendChild(description);
-        shadowDOM.appendChild(card);
+
+        let styles = document.createElement("style");
+        let color = 'yellow';
+        styles.innerHTML = `
+            .card{
+                width: 300px;
+                height: 300px;
+                background-color: ${color};
+                color: black;
+                padding: 16px;
+                border-radius: 16px;
+            }
+        `;
+        shadowDOM.appendChild(styles);
     }
 
     connectedCallback() {
  
-    //   const { shadowRoot } = this;
-    //   const title = shadowRoot.getElementById("title");
-    //   const description = shadowRoot.getElementById("description");
-    //   title.innerHTML = "Title";
-    //   description.innerHTML = "Description";
+        if(this.hasAttribute("title")){
+            let title = this.getAttribute("title");
+            this.shadowRoot.querySelector("#title").innerHTML = title;
+        }
 
-    //     if (this.hasAttribute("title")) {
-    //         title.innerHTML = this.getAttribute("title");
-    //     }
-    //     if (this.hasAttribute("description")) {
-    //         description.innerHTML = this.getAttribute("description");
-    //     }
+        if(this.hasAttribute('patito-color')){
+            let color = this.getAttribute('patito-color');
+            this.shadowRoot.querySelector('#card').style.backgroundColor = color;
+        }
 
         console.log("Custom component element added to page.");
     }
@@ -61,4 +62,4 @@ class SimpleComponent extends HTMLElement {
     }
 }
 
-customElements.define('simple-component', SimpleComponent);
+customElements.define('componenete-patito', Componente1);
