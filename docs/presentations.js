@@ -87,7 +87,7 @@ export const presentations = [
         title: "Web Components",
         description: "Componentes web",
         path: "temas/webcomponets/index.html",
-        image: "temas/webcomponets/images/web_components.png",
+        image: "temas/webcomponets/images/webcomponents.jpg",
         active: true
     },
     {
@@ -102,6 +102,13 @@ export const presentations = [
         description: "Hooks de React",
         path: "temas/react_hooks/index.html",
         image: "temas/react_hooks/images/hooks.png",
+        active: true
+    },
+    {
+        title: "React Scripts vs Vite",
+        description: "Comparación de React Scripts y Vite",
+        path: "temas/react_scripts_vite/index.html",
+        image: "temas/react_scripts_vite/images/vite.png",
         active: true
     }
 ];

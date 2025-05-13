@@ -13,7 +13,7 @@ presentations.forEach(presentation => {
     card.innerHTML = `
             <div style="display: flex; justify-content: center;">
             <img src="${presentation.image}" alt="${presentation.title}" 
-            width="325" height="200" style="object-fit: cover;">
+            width="250" height="150" style="object-fit: cover;">
             </div>
             <div>
             <h2>${presentation.title}</h2>
@@ -41,7 +41,7 @@ searchBar.addEventListener('input', (event) => {
             card.innerHTML = `
                 <div style="display: flex; justify-content: center;">
                 <img src="${presentation.image}" alt="${presentation.title}" 
-                width="325" height="200" style="object-fit: cover;">
+                width="250" height="150" style="object-fit: cover;">
                 </div>
                 <div>
                 <h2>${presentation.title}</h2>

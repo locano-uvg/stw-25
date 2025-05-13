@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CRA vs Vite</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/moon.min.css"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>React Framework</h1>
+        </section>
+        <!-- React Scripts -->
+        <section>
+          <section>
+            <h2>React Scripts</h2>
+            <h4>Create React App (Deprecated)</h4>
+          </section>
+          <section>
+            <p>
+              Con el fin de poder utilizar módulos, react crea una primera
+              versión de su propio compilador, que se llama
+              <strong>react-scripts</strong>.
+            </p>
+          </section>
+          <section>
+            <h3>¿Qué es CRA (Create React App)?</h3>
+            <ul>
+              <li>Herramienta para iniciar proyectos React</li>
+              <li>Usa Webpack por debajo</li>
+              <li>Lento al iniciar y hacer cambios</li>
+              <li>Difícil de personalizar</li>
+            </ul>
+          </section>
+          <section>
+            <h3>¿Qué es react-scripts?</h3>
+            <p>
+              <strong>react-scripts</strong> es un paquete que contiene todo lo
+              necesario para que react funcione sin la necesidad de utilizar
+              webpack y babel.
+            </p>
+            <p><strong>webpack</strong> es un empaquetador de módulos.</p>
+            <p><strong>babel</strong> es un compilador de javascript.</p>
+          </section>
+          <section>
+            <p>
+              El empaquetador de módulos es el encargado de empaquetar los
+              módulos de javascript en un solo archivo, para que el navegador
+              pueda entenderlo.
+            </p>
+            <p>
+              El compilador de javascript es el encargado de compilar el código
+              de javascript de ES6+ en código de javascript de ES5, para que el
+              navegador pueda entenderlo.
+            </p>
+          </section>
+          <section>
+            <h3>Al instalar react-scripts</h3>
+            <ul>
+              <li>Instala React, React DOM y react-scripts</li>
+              <li>Configura Webpack, Babel y ESLint</li>
+              <li>Crea estructura básica del proyecto</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Scripts de react-scripts</h3>
+            <ul>
+              <li>
+                <code>npm start</code> - Inicia servidor de desarrollo
+                <ul>
+                  <li>Compila todo el código</li>
+                  <li>Habilita Hot Reloading</li>
+                  <li>Muestra errores en el navegador</li>
+                </ul>
+              </li>
+              <li>
+                <code>npm run build</code> - Crea versión de producción
+                <ul>
+                  <li>Minifica y optimiza el código</li>
+                  <li>Genera archivos estáticos en /build</li>
+                  <li>Prepara para despliegue</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <p>
+              Para que funcione, se necesita instalar react-scripts en el
+              proyecto.
+            </p>
+            <pre><code>mkdir proyecto-stw25-react-scripts</code></pre>
+            <pre><code>cd proyecto-stw25-react-scripts</code></pre>
+            <pre><code>npm init -y</code></pre>
+            <pre><code>npm install react react-dom react-scripts</code></pre>
+            <pre><code>npm start</code></pre>
+          </section>
+        </section>
+        <!-- Vite -->
+        <section>
+          <section>
+            <h2>Vite</h2>
+          </section>
+          <section>
+            <p>
+              Vite es un nuevo framework de react que se encarga de crear un
+              servidor de desarrollo y un empaquetador de módulos.
+            </p>
+            <p>Vite es mucho más rápido que react-scripts.</p>
+          </section>
+          <section>
+            <h3>¿Qué es Vite?</h3>
+            <ul>
+              <li>Herramienta de desarrollo rápida para frontend</li>
+              <li>Usa ES Modules nativos + Rollup</li>
+              <li>Recompila solo lo que cambia</li>
+              <li>Muy fácil de configurar</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Scripts de Vite</h3>
+            <ul>
+              <li>
+                <code>npm run dev</code> - Servidor de desarrollo
+                <ul>
+                  <li>Usa ES Modules nativos</li>
+                  <li>Compilación bajo demanda</li>
+                  <li>Hot Module Replacement instantáneo</li>
+                </ul>
+              </li>
+              <li>
+                <code>npm run build</code> - Build de producción
+                <ul>
+                  <li>Usa Rollup para optimización</li>
+                  <li>Genera archivos en /dist</li>
+                  <li>Mejor rendimiento final</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Creando un proyecto con Vite</h3>
+            <pre><code>
+                npm create vite@latest proyecto-stw25-vite --template react
+                cd proyecto-stw25-vite
+                npm install
+                npm run dev</code></pre>
+            <ul>
+              <li>Instala React y Vite</li>
+              <li>Configuración mínima inicial</li>
+              <li>Estructura moderna y limpia</li>
+            </ul>
+          </section>
+        </section>
+        <!-- Comparando CRA vs Vite -->
+        <section>
+          <section>
+            <h2>Comparando CRA vs Vite</h2>
+          </section>
+          <section>
+            <p>Entendamos por qué Vite está reemplazando a Create React App</p>
+          </section>
+
+          <section>
+            <h3>Comparación CRA vs Vite</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Característica</th>
+                  <th>CRA</th>
+                  <th>Vite</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tiempo de inicio</td>
+                  <td>5-10s</td>
+                  <td>1s</td>
+                </tr>
+                <tr>
+                  <td>Hot Reload</td>
+                  <td>Lento</td>
+                  <td>Instantáneo</td>
+                </tr>
+                <tr>
+                  <td>Configuración</td>
+                  <td>Cerrada</td>
+                  <td>Abierta y simple</td>
+                </tr>
+                <tr>
+                  <td>Modularidad</td>
+                  <td>Limitada</td>
+                  <td>Avanzada</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+        <section>
+          <h3>Metáfora para recordarlo</h3>
+          <p>
+            "CRA es como un auto antiguo pero confiable.<br />Vite es un auto
+            eléctrico: moderno y veloz."
+          </p>
+        </section>
+
+        <section>
+          <h3>Actividad en clase</h3>
+          <ol>
+            <li>Crear proyecto con CRA y Vite</li>
+            <li>
+              Cambiar texto de <code>&lt;h1&gt;</code> y observar velocidad
+            </li>
+            <li>Explorar estructura de archivos</li>
+            <li>Decidir cuál prefieren para su siguiente proyecto</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>✨ Recomendación Final</h2>
+          <p>Para nuevos proyectos, ¡usen Vite! ⚡</p>
+          <p>Menos configuración, más productividad.</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+      Reveal.initialize();
+    </script>
+  </body>
+</html>
