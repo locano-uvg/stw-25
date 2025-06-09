@@ -110,5 +110,12 @@ export const presentations = [
         path: "temas/react_scripts_vite/index.html",
         image: "temas/react_scripts_vite/images/vite.png",
         active: true
+    },
+    {
+        title: "Dashboards ",
+        description: "Dashboards",
+        path: "temas/dashboards/index.html",
+        image: "temas/dashboards/images/dash.png",
+        active: true
     }
 ];
